@@ -1,0 +1,97 @@
+"use client";
+
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+export default function Navbar() {
+  return (
+    <header className="w-full bg-white border-b border-neutral-200">
+      <div className="mx-auto max-w-[1200px] px-6 h-[72px] flex items-center justify-between">
+        {/* Left: Logo + nav */}
+        <div className="flex items-center gap-12">
+          {/* Logo */}
+          <div className="flex items-center gap-2 font-semibold text-lg cursor-pointer">
+            <div className="flex gap-[3px]">
+              <span className="w-[6px] h-[14px] bg-black rounded-sm" />
+              <span className="w-[6px] h-[20px] bg-black rounded-sm" />
+              <span className="w-[6px] h-[10px] bg-black rounded-sm self-end" />
+            </div>
+            <span className="tracking-tight">Paper Theory</span>
+          </div>
+
+          {/* Nav links */}
+          <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-700 relative">
+            <NavItem
+              label="Platform"
+              items={["Overview", "Research", "Prototypes", "Analytics"]}
+            />
+            <NavItem
+              label="Solutions"
+              items={["Product teams", "UX research", "Enterprise"]}
+            />
+            <NavItem
+              label="Resources"
+              items={["Blog", "Guides", "Help center"]}
+            />
+            <NavItem
+              label="Customers"
+              items={["Case studies", "Testimonials"]}
+            />
+            <a href="#" className="hover:text-neutral-900 transition">
+              Pricing
+            </a>
+          </nav>
+        </div>
+
+        {/* Right actions */}
+        <div className="flex items-center gap-3">
+          <button className="h-9 px-4 rounded-full border border-neutral-300 text-sm text-neutral-800 hover:bg-neutral-50 transition">
+            Log in
+          </button>
+          <Button className="h-9 px-4 rounded-full text-sm font-medium">
+            Contact sales
+          </Button>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+function NavItem({ label, items }: { label: string; items: string[] }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button className="flex items-center gap-1 hover:text-neutral-900 transition">
+        <span>{label}</span>
+        <ChevronDown
+          className={`w-4 h-4 mt-[1px] transition-transform ${
+            open ? "rotate-180" : ""
+          }`}
+        />
+      </button>
+
+      {open && (
+        <div className="absolute top-full left-0 mt-3 w-48 rounded-xl border border-neutral-200 bg-white shadow-lg">
+          <ul className="py-2">
+            {items.map((item) => (
+              <li key={item}>
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-neutral-900 transition"
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+}
