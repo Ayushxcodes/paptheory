@@ -8,61 +8,49 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
+
     <header className="w-full bg-white border-b border-neutral-200">
       <div className="mx-auto max-w-[1200px] px-6 h-[72px] flex items-center justify-between">
-        {/* Left: Logo + nav */}
-        <div className="flex items-center gap-12">
-          {/* Logo */}
-          <div className="flex items-center gap-2 font-semibold text-lg cursor-pointer">
-            <div className="flex gap-[3px]">
-              <span className="w-[6px] h-[14px] bg-black rounded-sm" />
-              <span className="w-[6px] h-[20px] bg-black rounded-sm" />
-              <span className="w-[6px] h-[10px] bg-black rounded-sm self-end" />
-            </div>
-            <span className="tracking-tight">Paper Theory</span>
+        {/* Left: Logo */}
+        <div className="flex items-center gap-2 font-semibold text-lg cursor-pointer">
+          <div className="flex gap-[3px]">
+            <span className="w-[6px] h-[14px] bg-black rounded-sm" />
+            <span className="w-[6px] h-[20px] bg-black rounded-sm" />
+            <span className="w-[6px] h-[10px] bg-black rounded-sm self-end" />
           </div>
-
-          {/* Desktop Nav links */}
-          <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-700 relative">
-            <NavItem
-              label="Platform"
-              items={["Overview", "Research", "Prototypes", "Analytics"]}
-            />
-            <NavItem
-              label="Solutions"
-              items={["Product teams", "UX research", "Enterprise"]}
-            />
-            <NavItem
-              label="Resources"
-              items={["Blog", "Guides", "Help center"]}
-            />
-            <NavItem
-              label="Customers"
-              items={["Case studies", "Testimonials"]}
-            />
-            <a href="#" className="hover:text-neutral-900 transition">
-              Pricing
-            </a>
-          </nav>
+          <span className="tracking-tight">Paper Theory</span>
         </div>
 
-        {/* Right actions */}
-        <div className="flex items-center gap-3">
-          <button className="hidden sm:flex h-9 px-4 rounded-full border border-neutral-300 text-sm text-neutral-800 hover:bg-neutral-50 transition">
-            Log in
-          </button>
-          <Button className="hidden sm:flex h-9 px-4 rounded-full text-sm font-medium">
-            Contact sales
-          </Button>
+        {/* Desktop Nav links shifted to right */}
+        <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-700 relative">
+          <NavItem
+            label="Platform"
+            items={["Overview", "Research", "Prototypes", "Analytics"]}
+          />
+          <NavItem
+            label="Solutions"
+            items={["Product teams", "UX research", "Enterprise"]}
+          />
+          <NavItem
+            label="Resources"
+            items={["Blog", "Guides", "Help center"]}
+          />
+          <NavItem
+            label="Customers"
+            items={["Case studies", "Testimonials"]}
+          />
+          <a href="#" className="hover:text-neutral-900 transition">
+            Pricing
+          </a>
+        </nav>
 
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2 rounded-md text-neutral-700 hover:bg-neutral-100"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
+        {/* Mobile menu button */}
+        <button
+          className="md:hidden p-2 rounded-md text-neutral-700 hover:bg-neutral-100"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
 
       {/* Mobile menu */}
@@ -88,14 +76,6 @@ export default function Navbar() {
             <a href="#" className="block py-2 text-sm text-neutral-700 hover:text-neutral-900">
               Pricing
             </a>
-            <div className="flex flex-col gap-2 pt-4 border-t border-neutral-200">
-              <button className="w-full h-9 px-4 rounded-full border border-neutral-300 text-sm text-neutral-800 hover:bg-neutral-50 transition">
-                Log in
-              </button>
-              <Button className="w-full h-9 px-4 rounded-full text-sm font-medium">
-                Contact sales
-              </Button>
-            </div>
           </div>
         </div>
       )}

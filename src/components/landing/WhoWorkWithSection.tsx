@@ -4,38 +4,7 @@ export default function WhoYouWorkWithSection() {
   return (
     <section className="relative w-full bg-[#F5FFD8] overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-6 py-32 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-        {/* Left visual */}
-        <div className="relative">
-          {/* Top image */}
-          <div
-            className="relative w-full h-[420px] overflow-hidden"
-            style={{
-              clipPath: "polygon(0 0, 85% 0, 100% 100%, 0 85%)",
-            }}
-          >
-            <img
-              src="/events-top.jpg"
-              alt="Event venue"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Bottom image */}
-          <div
-            className="absolute left-1/2 -bottom-32 w-[520px] h-[360px] -translate-x-1/2 overflow-hidden"
-            style={{
-              clipPath: "polygon(0 0, 50% 100%, 100% 0)",
-            }}
-          >
-            <img
-              src="/events-bottom.jpg"
-              alt="Event crowd"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </div>
-        </div>
-
-        {/* Right content */}
+        {/* Left: Text content */}
         <div className="max-w-[520px]">
           <h2 className="text-[64px] font-semibold tracking-tight text-neutral-900">
             Who We Work With
@@ -55,6 +24,24 @@ export default function WhoYouWorkWithSection() {
               institutions
             </li>
           </ul>
+        </div>
+
+        {/* Right: 3-column visual/design/image */}
+        <div className="w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex flex-col items-center mt-0 md:mt-0">
+              <h3 className="text-2xl font-semibold mb-4">Image</h3>
+              <img src="/image1.jpg" alt="Image" className="w-32 h-32 object-cover rounded-lg" />
+            </div>
+            <div className="flex flex-col items-center mt-8 md:mt-40">
+              <h3 className="text-2xl font-semibold mb-4">Visual</h3>
+              <img src="/image2.jpg" alt="Visual" className="w-32 h-32 object-cover rounded-lg" />
+            </div>
+            <div className="flex flex-col items-center mt-0 md:mt-2">
+              <h3 className="text-2xl font-semibold mb-4">Design</h3>
+              <img src="/image3.jpg" alt="Design" className="w-32 h-32 object-cover rounded-lg" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
