@@ -2,12 +2,12 @@
 
 export default function StrategyAdvisorySection() {
   return (
-    <section className="w-full min-h-screen flex items-center bg-[#ECEAE6]">
+    <section className="w-full min-h-screen lg:min-h-screen flex items-center bg-[#ECEAE6] py-32 lg:py-0">
 
       <div className="mx-auto max-w-[1200px] px-6">
         <div className="max-w-[760px]">
           {/* Heading */}
-          <h2 className="text-[64px] font-semibold tracking-tight text-neutral-900">
+          <h2 className="text-4xl lg:text-[64px] font-semibold tracking-tight text-neutral-900">
             Strategy &amp; Advisory
           </h2>
 

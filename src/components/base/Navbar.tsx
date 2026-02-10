@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <header className="w-full bg-white border-b border-neutral-200">
       <div className="mx-auto max-w-[1200px] px-6 h-[72px] flex items-center justify-between">
@@ -20,7 +22,7 @@ export default function Navbar() {
             <span className="tracking-tight">Paper Theory</span>
           </div>
 
-          {/* Nav links */}
+          {/* Desktop Nav links */}
           <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-700 relative">
             <NavItem
               label="Platform"
@@ -46,14 +48,57 @@ export default function Navbar() {
 
         {/* Right actions */}
         <div className="flex items-center gap-3">
-          <button className="h-9 px-4 rounded-full border border-neutral-300 text-sm text-neutral-800 hover:bg-neutral-50 transition">
+          <button className="hidden sm:flex h-9 px-4 rounded-full border border-neutral-300 text-sm text-neutral-800 hover:bg-neutral-50 transition">
             Log in
           </button>
-          <Button className="h-9 px-4 rounded-full text-sm font-medium">
+          <Button className="hidden sm:flex h-9 px-4 rounded-full text-sm font-medium">
             Contact sales
           </Button>
+
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden p-2 rounded-md text-neutral-700 hover:bg-neutral-100"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-white border-t border-neutral-200">
+          <div className="px-6 py-4 space-y-4">
+            <MobileNavItem
+              label="Platform"
+              items={["Overview", "Research", "Prototypes", "Analytics"]}
+            />
+            <MobileNavItem
+              label="Solutions"
+              items={["Product teams", "UX research", "Enterprise"]}
+            />
+            <MobileNavItem
+              label="Resources"
+              items={["Blog", "Guides", "Help center"]}
+            />
+            <MobileNavItem
+              label="Customers"
+              items={["Case studies", "Testimonials"]}
+            />
+            <a href="#" className="block py-2 text-sm text-neutral-700 hover:text-neutral-900">
+              Pricing
+            </a>
+            <div className="flex flex-col gap-2 pt-4 border-t border-neutral-200">
+              <button className="w-full h-9 px-4 rounded-full border border-neutral-300 text-sm text-neutral-800 hover:bg-neutral-50 transition">
+                Log in
+              </button>
+              <Button className="w-full h-9 px-4 rounded-full text-sm font-medium">
+                Contact sales
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
@@ -91,6 +136,38 @@ function NavItem({ label, items }: { label: string; items: string[] }) {
             ))}
           </ul>
         </div>
+      )}
+    </div>
+  );
+}
+
+function MobileNavItem({ label, items }: { label: string; items: string[] }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div>
+      <button
+        className="flex items-center justify-between w-full py-2 text-sm text-neutral-700 hover:text-neutral-900"
+        onClick={() => setOpen(!open)}
+      >
+        <span>{label}</span>
+        <ChevronDown
+          className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+      {open && (
+        <ul className="pl-4 mt-2 space-y-1">
+          {items.map((item) => (
+            <li key={item}>
+              <a
+                href="#"
+                className="block py-1 text-sm text-neutral-600 hover:text-neutral-900"
+              >
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul>
       )}
     </div>
   );

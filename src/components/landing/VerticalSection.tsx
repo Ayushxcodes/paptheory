@@ -5,7 +5,7 @@ export default function VerticalsSection() {
     <section className="w-full bg-white py-32">
       <div className="mx-auto max-w-[1200px] px-6">
         {/* Section title */}
-        <h2 className="text-[64px] font-semibold tracking-tight text-neutral-900">
+        <h2 className="text-4xl lg:text-[64px] font-semibold tracking-tight text-neutral-900">
           Capabilities
         </h2>
 
@@ -16,7 +16,7 @@ export default function VerticalsSection() {
         <div className="mt-20 space-y-24">
           {/* Strategy */}
           <div className="max-w-[720px]">
-            <h3 className="text-[48px] font-semibold tracking-tight text-neutral-900">
+            <h3 className="text-3xl lg:text-[48px] font-semibold tracking-tight text-neutral-900">
               Strategy
             </h3>
 
@@ -35,7 +35,7 @@ export default function VerticalsSection() {
 
           {/* Communications */}
           <div className="max-w-[640px]">
-            <h3 className="text-[36px] font-medium tracking-tight text-neutral-900">
+            <h3 className="text-2xl lg:text-[36px] font-medium tracking-tight text-neutral-900">
               Communications
             </h3>
 
@@ -48,7 +48,7 @@ export default function VerticalsSection() {
 
           {/* Engagement */}
           <div className="max-w-[560px]">
-            <h3 className="text-[28px] font-medium tracking-tight text-neutral-900">
+            <h3 className="text-xl lg:text-[28px] font-medium tracking-tight text-neutral-900">
               Engagement
             </h3>
 

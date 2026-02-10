@@ -23,7 +23,7 @@ export default function SelectedWorkSection() {
 
           {/* Title */}
           <div className="lg:col-span-2">
-            <h2 className="text-[56px] font-semibold tracking-tight text-white leading-[1.05]">
+            <h2 className="text-4xl lg:text-[56px] font-semibold tracking-tight text-white leading-[1.05]">
               What we’re<br />
               made of
             </h2>

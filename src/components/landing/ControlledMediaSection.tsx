@@ -2,12 +2,12 @@
 
 export default function ControlledMediaSection() {
   return (
-    <section className="w-full min-h-screen flex items-center bg-[#ECEAE6]">
+    <section className="w-full min-h-screen lg:min-h-screen flex items-center bg-[#ECEAE6] py-32 lg:py-0">
 
       <div className="mx-auto max-w-[1200px] px-6">
         <div className="max-w-[620px]">
           {/* Heading */}
-          <h2 className="text-[44px] font-medium tracking-tight text-neutral-900">
+          <h2 className="text-3xl lg:text-[44px] font-medium tracking-tight text-neutral-900">
             Controlled Media &amp; Amplification
           </h2>
 

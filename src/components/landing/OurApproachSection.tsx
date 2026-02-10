@@ -8,7 +8,7 @@ export default function OurApproachSection() {
           {/* Left content */}
           <div className="max-w-[520px]">
             {/* Section title */}
-            <h2 className="text-[64px] font-semibold tracking-tight text-neutral-900">
+            <h2 className="text-4xl lg:text-[64px] font-semibold tracking-tight text-neutral-900">
               Our Approach
             </h2>
 

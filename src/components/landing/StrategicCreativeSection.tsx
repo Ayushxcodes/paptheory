@@ -6,7 +6,7 @@ export default function StrategicCreativeSection() {
       <div className="mx-auto max-w-[1200px] px-6">
         <div className="max-w-[700px]">
           {/* Heading */}
-          <h2 className="text-[52px] font-semibold tracking-tight text-neutral-900">
+          <h2 className="text-3xl lg:text-[52px] font-semibold tracking-tight text-neutral-900">
             Strategic Creative &amp; Content
           </h2>
 
