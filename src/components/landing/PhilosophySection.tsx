@@ -2,7 +2,7 @@
 
 export default function PhilosophySection() {
   return (
-    <section className="w-full bg-black text-white py-32">
+    <section className="w-full bg-black text-white py-16 md:py-32">
       <div className="mx-auto max-w-[720px] px-6 text-center">
         {/* Icon / Emblem */}
         <div className="mx-auto mb-10 flex h-10 w-10 items-center justify-center border border-white/60">

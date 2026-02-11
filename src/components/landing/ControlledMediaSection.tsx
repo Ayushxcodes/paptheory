@@ -7,7 +7,7 @@ export default function ControlledMediaSection() {
       <div className="mx-auto max-w-[1200px] px-6">
         <div className="max-w-[620px]">
           {/* Heading */}
-          <h2 className="text-3xl lg:text-[44px] font-medium tracking-tight text-neutral-900">
+          <h2 className="text-3xl md:text-4xl lg:text-[44px] font-medium tracking-tight text-neutral-900">
             Controlled Media &amp; Amplification
           </h2>
 
