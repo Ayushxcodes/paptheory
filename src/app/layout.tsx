@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/base/Navbar";
 import Footer from "@/components/base/Footer";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,11 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        
+        {/* Floating GENZ Button */}
+        <Link href="/genz" className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-neutral-900 text-white px-8 py-2 rounded-full shadow-lg hover:bg-neutral-800 transition z-50 animate-bounce">
+          GENZ →
+        </Link>
       </body>
     </html>
   );

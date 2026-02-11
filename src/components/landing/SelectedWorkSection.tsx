@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+
 
 export default function SelectedWorkSection() {
   return (
@@ -181,6 +183,11 @@ export default function SelectedWorkSection() {
           </div>
         </motion.div>
 
+      </div>
+      <div className="absolute bottom-0 left-0 w-full h-8 bg-neutral-900 flex items-center justify-center">
+        <Link href="/capabilities" className="text-white text-sm hover:text-neutral-300 transition">
+          Explore Our Work ↓
+        </Link>
       </div>
     </section>
   );

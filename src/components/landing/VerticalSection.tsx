@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import Link from "next/link";
 export default function CapabilitiesSection() {
   return (
     <section className="relative py-20 md:py-40 bg-white overflow-hidden">
@@ -115,6 +115,11 @@ export default function CapabilitiesSection() {
           </p>
         </motion.div>
 
+      </div>
+      <div className="absolute bottom-0 left-0 w-full h-8 bg-neutral-900 flex items-center justify-center">
+        <Link href="/capabilities" className="text-white text-sm hover:text-neutral-300 transition">
+          Explore Our Work ↓
+        </Link>
       </div>
     </section>
   );
