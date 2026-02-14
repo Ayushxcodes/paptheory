@@ -1,191 +1,156 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
-
 
 export default function SelectedWorkSection() {
   return (
-    <section className="relative py-20 md:py-40 bg-[#f8f7f4]">
+    <section className="relative py-20 md:py-40 bg-white">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Section Header */}
         <div className="max-w-3xl">
-          <p className="text-sm uppercase tracking-wide text-neutral-500">
+          <p className="text-sm uppercase tracking-wide text-[#ff5a1f] font-medium">
             Selected Work
           </p>
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900">
+          <h2 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight text-[#111111]">
             Selected Work
           </h2>
 
-          <p className="mt-6 text-lg text-neutral-700 leading-relaxed">
+          <p className="mt-6 text-lg text-[#555555] leading-relaxed">
             Our work spans political communication, institutional
             narrative-building, and strategic creative campaigns. The examples
             below reflect how we apply strategic thinking across contexts —
             not a catalogue of outputs.
           </p>
 
-          <div className="mt-10 h-px w-full bg-neutral-300" />
+          <div className="mt-10 h-px w-full bg-[#ff5a1f]/30" />
         </div>
 
-        {/* ================= CASE STUDY 1 ================= */}
+        {/* STACK WRAPPER */}
+        <div className="relative mt-32 space-y-32">
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-24"
-        >
-          <div className="grid md:grid-cols-3 gap-8 md:gap-16">
+          {/* ================= CARD 1 ================= */}
+          <div className="sticky top-24 z-10">
+            <div className="bg-white rounded-3xl shadow-lg p-10 md:p-16 border border-[#ff5a1f]/20">
 
-            {/* Left Label Column */}
-            <div className="text-sm text-neutral-500 uppercase tracking-wide">
-              Case Study I
-            </div>
+              <div className="grid md:grid-cols-3 gap-8 md:gap-16">
+                <div className="text-sm text-[#ff5a1f] uppercase tracking-wide font-medium">
+                  Case Study I
+                </div>
 
-            {/* Right Content */}
-            <div className="md:col-span-2 space-y-14">
+                <div className="md:col-span-2 space-y-12">
 
-              {/* 1. Context */}
-              <div>
-                <h4 className="text-xl font-semibold text-neutral-900">
-                  Context
-                </h4>
-                <p className="mt-4 text-neutral-700 leading-relaxed">
-                  A nationally significant institution faced heightened public
-                  scrutiny following a period of policy transition. The
-                  communication challenge was not volume — but coherence.
-                </p>
-                <p className="mt-4 text-neutral-600 leading-relaxed">
-                  Institutional credibility and long-term public trust were at stake.
-                </p>
-              </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-[#111111]">
+                      Context
+                    </h4>
+                    <p className="mt-4 text-[#555555] leading-relaxed">
+                      A nationally significant institution faced heightened public
+                      scrutiny following a period of policy transition. The
+                      communication challenge was not volume — but coherence.
+                    </p>
+                  </div>
 
-              {/* 2. Strategic Intent */}
-              <div>
-                <h4 className="text-xl font-semibold text-neutral-900">
-                  Strategic Intent
-                </h4>
-                <p className="mt-4 text-neutral-700 leading-relaxed">
-                  Public perception needed to shift from reactive defense to
-                  steady institutional leadership.
-                </p>
-                <p className="mt-4 text-neutral-600 leading-relaxed">
-                  A measured narrative framework was chosen to reinforce
-                  continuity, competence, and long-term vision.
-                </p>
-              </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-[#111111]">
+                      Strategic Intent
+                    </h4>
+                    <p className="mt-4 text-[#555555] leading-relaxed">
+                      Public perception needed to shift from reactive defense to
+                      steady institutional leadership.
+                    </p>
+                  </div>
 
-              {/* 3. Our Role */}
-              <div>
-                <h4 className="text-xl font-semibold text-neutral-900">
-                  Our Role
-                </h4>
-                <p className="mt-4 text-neutral-700 leading-relaxed">
-                  Lead strategic advisory mandate, narrative framework design,
-                  leadership positioning, and controlled media amplification.
-                </p>
-              </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-[#111111]">
+                      Our Role
+                    </h4>
+                    <p className="mt-4 text-[#555555] leading-relaxed">
+                      Lead strategic advisory mandate, narrative framework design,
+                      and leadership positioning.
+                    </p>
+                  </div>
 
-              {/* 4. Outcome */}
-              <div>
-                <h4 className="text-xl font-semibold text-neutral-900">
-                  Outcome
-                </h4>
-                <p className="mt-4 text-neutral-700 leading-relaxed">
-                  Institutional messaging became aligned across departments,
-                  public briefings regained coherence, and media narratives
-                  shifted toward long-term governance stability rather than
-                  short-term controversy.
-                </p>
+                  <div>
+                    <h4 className="text-xl font-semibold text-[#111111]">
+                      Outcome
+                    </h4>
+                    <p className="mt-4 text-[#555555] leading-relaxed">
+                      Institutional messaging aligned across departments and
+                      public briefings regained coherence.
+                    </p>
+                  </div>
+
+                </div>
               </div>
 
             </div>
           </div>
 
-          <div className="mt-20 h-px w-full bg-neutral-200" />
-        </motion.div>
+          {/* ================= CARD 2 ================= */}
+          <div className="sticky top-28 z-20">
+            <div className="bg-white rounded-3xl shadow-lg p-10 md:p-16 border border-[#ff5a1f]/20">
 
-        {/* ================= CASE STUDY 2 ================= */}
+              <div className="grid md:grid-cols-3 gap-8 md:gap-16">
+                <div className="text-sm text-[#ff5a1f] uppercase tracking-wide font-medium">
+                  Case Study II
+                </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-24"
-        >
-          <div className="grid md:grid-cols-3 gap-8 md:gap-16">
+                <div className="md:col-span-2 space-y-12">
 
-            <div className="text-sm text-neutral-500 uppercase tracking-wide">
-              Case Study II
-            </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-[#111111]">
+                      Context
+                    </h4>
+                    <p className="mt-4 text-[#555555] leading-relaxed">
+                      A private sector organisation operating under regulatory scrutiny
+                      required narrative repositioning.
+                    </p>
+                  </div>
 
-            <div className="md:col-span-2 space-y-14">
+                  <div>
+                    <h4 className="text-xl font-semibold text-[#111111]">
+                      Strategic Intent
+                    </h4>
+                    <p className="mt-4 text-[#555555] leading-relaxed">
+                      Reframe the organisation as a stable, responsible long-term actor.
+                    </p>
+                  </div>
 
-              {/* 1. Context */}
-              <div>
-                <h4 className="text-xl font-semibold text-neutral-900">
-                  Context
-                </h4>
-                <p className="mt-4 text-neutral-700 leading-relaxed">
-                  A private sector organisation operating under regulatory
-                  scrutiny required a repositioning of its institutional
-                  narrative.
-                </p>
-                <p className="mt-4 text-neutral-600 leading-relaxed">
-                  The reputational stakes involved investor confidence,
-                  regulatory relationships, and long-term market credibility.
-                </p>
-              </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-[#111111]">
+                      Our Role
+                    </h4>
+                    <p className="mt-4 text-[#555555] leading-relaxed">
+                      Strategic advisory, executive frameworks, and narrative-led direction.
+                    </p>
+                  </div>
 
-              {/* 2. Strategic Intent */}
-              <div>
-                <h4 className="text-xl font-semibold text-neutral-900">
-                  Strategic Intent
-                </h4>
-                <p className="mt-4 text-neutral-700 leading-relaxed">
-                  The objective was to reframe the organisation as a stable,
-                  responsible long-term actor rather than a reactive commercial entity.
-                </p>
-                <p className="mt-4 text-neutral-600 leading-relaxed">
-                  The approach prioritised disciplined messaging, executive
-                  positioning, and narrative coherence across stakeholder groups.
-                </p>
-              </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-[#111111]">
+                      Outcome
+                    </h4>
+                    <p className="mt-4 text-[#555555] leading-relaxed">
+                      Leadership communication gained clarity and credibility strengthened.
+                    </p>
+                  </div>
 
-              {/* 3. Our Role */}
-              <div>
-                <h4 className="text-xl font-semibold text-neutral-900">
-                  Our Role
-                </h4>
-                <p className="mt-4 text-neutral-700 leading-relaxed">
-                  Strategic advisory, executive communication frameworks,
-                  narrative-led creative direction, and selective amplification planning.
-                </p>
-              </div>
-
-              {/* 4. Outcome */}
-              <div>
-                <h4 className="text-xl font-semibold text-neutral-900">
-                  Outcome
-                </h4>
-                <p className="mt-4 text-neutral-700 leading-relaxed">
-                  Public positioning stabilised, leadership communication
-                  gained clarity, and institutional credibility strengthened
-                  among regulatory and financial stakeholders.
-                </p>
+                </div>
               </div>
 
             </div>
           </div>
-        </motion.div>
 
+        </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-8 bg-neutral-900 flex items-center justify-center">
-        <Link href="/capabilities" className="text-white text-sm hover:text-neutral-300 transition">
+
+      {/* Bottom CTA Bar */}
+      <div className="absolute bottom-0 left-0 w-full h-7  bg-[#ff5a1f] flex items-center justify-center">
+        <Link
+          href="/capabilities"
+          className="text-white text-sm hover:opacity-80 transition"
+        >
           Explore Our Work ↓
         </Link>
       </div>

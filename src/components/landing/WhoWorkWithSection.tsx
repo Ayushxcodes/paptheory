@@ -1,4 +1,5 @@
 import ReflectiveCard from '@/components/ReflectiveCard';
+import ExploreWorkBar from '@/components/ExploreWorkBar';
 
 export default function WhoWeWorkWith() {
   return (
@@ -71,6 +72,7 @@ export default function WhoWeWorkWith() {
           </div>
         </div>
       </div>
+      <ExploreWorkBar />
     </section>
   );
 }

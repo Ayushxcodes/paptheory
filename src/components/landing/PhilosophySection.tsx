@@ -1,5 +1,7 @@
 "use client";
 
+import ExploreWorkBar from '@/components/ExploreWorkBar';
+
 export default function PhilosophySection() {
   return (
     <section className="w-full bg-black text-white py-16 md:py-32">

@@ -78,7 +78,7 @@ const ReflectiveCard: React.FC<ReflectiveCardProps> = ({
 
   return (
     <div
-      className={`relative w-[320px] h-[500px] rounded-[20px] overflow-hidden bg-[#1a1a1a] shadow-[0_20px_50px_rgba(0,0,0,0.5),0_0_0_1px_rgba(255,255,255,0.1)_inset] isolate font-sans ${className}`}
+      className={`relative w-[320px] h-[500px] rounded-[20px] overflow-hidden bg-white shadow-[0_20px_50px_rgba(255,90,31,0.1),0_0_0_1px_rgba(255,90,31,0.2)_inset] isolate font-sans ${className}`}
       style={{ ...style, ...cssVariables }}
     >
       <svg className="absolute w-0 h-0 pointer-events-none opacity-0" aria-hidden="true">

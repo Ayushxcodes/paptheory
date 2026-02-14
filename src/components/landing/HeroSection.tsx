@@ -1,4 +1,5 @@
 import CardSwap, { Card } from '@/components/CardSwap'
+import ExploreWorkBar from '@/components/ExploreWorkBar'
 
 export default function Hero() {
   return (
@@ -98,6 +99,7 @@ export default function Hero() {
 
         </div>
       </div>
+      <ExploreWorkBar />
     </section>
   );
 }
