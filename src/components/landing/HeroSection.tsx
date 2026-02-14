@@ -68,10 +68,10 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* RIGHT SIDE */}
+          {/* RIGHT SIDE — Hidden Below lg */}
           <div
             style={{ height: '600px', position: 'relative' }}
-            className="mt-16 lg:mt-0 lg:-mt-38"
+            className="hidden lg:block lg:-mt-38"
           >
             <CardSwap
               cardDistance={60}
