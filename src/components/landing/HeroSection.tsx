@@ -1,168 +1,103 @@
-"use client";
+import CardSwap, { Card } from '@/components/CardSwap'
 
-import { motion } from "framer-motion";
-import Link from "next/link";
-
-export default function HeroSection() {
+export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden">
-      
-      {/* Blurred Background Image */}
-      <div className="absolute inset-0 bg-[url('/bg.png')] bg-fit bg-center bg-no-repeat blur-sm"></div>
-      
-      {/* Subtle Dot Grid */}
-      <div className="absolute inset-0 opacity-[0.18] pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,#d6d3cc_1px,transparent_1px)] [background-size:32px_32px]" />
+    <section className="bg-[#f3f3f3]">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-28 pb-24 lg:pb-32">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          
+          {/* LEFT SIDE */}
+          <div>
+            <h3 className="
+              text-[34px] 
+              sm:text-[42px] 
+              lg:text-[56px] 
+              leading-[1.1] 
+              lg:leading-[1.05] 
+              font-extrabold 
+              text-[#111111] 
+              tracking-[-0.5px] 
+              lg:tracking-[-1px]
+            ">
+              Strategic Communication for and Public Trust
+              <br />
+              Institutions, Influence,{" "}
+              <span className="text-[#ff5a1f] relative inline-block">
+                and Public Trust
+                <span className="absolute -top-2 -right-3 w-2 h-2 bg-[#ff5a1f]" />
+              </span>
+            </h3>
+
+            <p className="
+              mt-6 sm:mt-8 
+              text-[16px] 
+              sm:text-[18px] 
+              leading-[26px] 
+              sm:leading-[30px] 
+              text-[#6b6b6b] 
+              max-w-[520px]
+            ">
+              We work with governments, political stakeholders, large institutions, and private sector brands to shape narrative, manage reputation, and communicate responsibly in the public domain.
+            </p>
+
+            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+              <button className="bg-[#ff5a1f] text-white px-8 py-4 rounded-md text-[16px] font-semibold hover:opacity-90 transition w-full sm:w-auto">
+                Book a demo →
+              </button>
+
+              <button className="flex items-center justify-center sm:justify-start gap-3 text-[#111111] font-medium text-[16px]">
+                Book a call
+                <span className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm">
+                  →
+                </span>
+              </button>
+            </div>
+
+            <div className="mt-12 sm:mt-14">
+              <p className="text-[14px] text-[#6b6b6b] mb-6">
+                Our Values
+              </p>
+
+              <div className="flex flex-wrap items-center gap-6 sm:gap-10 opacity-70">
+                <span className="text-[13px] font-semibold">Strategy-led</span>
+                <span className="text-[13px] font-semibold">Ethics-driven</span>
+                <span className="text-[13px] font-semibold">
+                  Built for long-term credibility
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT SIDE */}
+          <div
+            style={{ height: '600px', position: 'relative' }}
+            className="mt-16 lg:mt-0 lg:-mt-38"
+          >
+            <CardSwap
+              cardDistance={60}
+              verticalDistance={70}
+              delay={5000}
+              pauseOnHover={false}
+            >
+              <Card className="bg-white border-2 border-[#ff5a1f] p-4">
+                <h3>Card 1</h3>
+                <p>Your content here</p>
+              </Card>
+
+              <Card className="bg-white border-2 border-[#ff5a1f] p-4">
+                <h3>Card 2</h3>
+                <p>Your content here</p>
+              </Card>
+
+              <Card className="bg-white border-2 border-[#ff5a1f] p-4">
+                <h3>Card 3</h3>
+                <p>Your content here</p>
+              </Card>
+            </CardSwap>
+          </div>
+
+        </div>
       </div>
-
-      {/* Hero Content */}
-      <div className="relative z-10 max-w-5xl mx-auto text-center pt-20 md:pt-40 px-6">
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 }}
-          className="text-4xl md:text-5xl lg:text-[64px] xl:text-[80px] leading-[1.05] font-semibold tracking-tight text-neutral-900"
-        >
-          Strategic Communication <br />
-          for Power and Public Trust
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.9 }}
-          className="mt-8 text-xl text-neutral-700 max-w-2xl mx-auto leading-relaxed"
-        >
-          We advise governments, institutions, and political stakeholders
-          on narrative discipline, leadership positioning, and long-term
-          legitimacy in environments shaped by scrutiny.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="mt-12 flex items-center justify-center gap-6"
-        >
-          <button className="px-4 py-2 md:px-8 md:py-4 rounded-full bg-neutral-900 text-white text-sm md:text-base font-medium hover:bg-neutral-800 transition">
-            Explore Capabilities
-          </button>
-
-          <button className="px-4 py-2 md:px-8 md:py-4 rounded-full border border-neutral-300 text-neutral-700 text-sm md:text-base hover:bg-neutral-200 transition">
-            Contact Advisory Team
-          </button>
-        </motion.div>
-      </div>
-
-      {/* Floating Institutional Cards */}
-      {/* Floating Institutional Card Ecosystem */}
-{/* Floating Institutional Card Ecosystem */}
-<div className="hidden md:block absolute top-70 left-1/2 -translate-x-1/2 w-full max-w-7xl px-6">
-  <div className="relative flex justify-center items-end">
-
-    {/* FAR LEFT SMALL */}
-    <motion.div
-      animate={{ y: [0, -10, 0] }}
-      transition={{ duration: 7, repeat: Infinity }}
-      className="absolute top-20 -left-60 rotate-[-10deg] bg-white rounded-xl shadow-[0_25px_70px_-20px_rgba(0,0,0,0.15)] p-5 w-56 border border-neutral-200"
-    >
-      <p className="text-xs text-neutral-500">Public Affairs</p>
-      <p className="mt-2 text-sm font-semibold text-neutral-900">
-        Policy Positioning
-      </p>
-    </motion.div>
-
-    {/* LEFT MID CONNECTOR (NEW) */}
-    <motion.div
-      animate={{ y: [0, -14, 0] }}
-      transition={{ duration: 8.5, repeat: Infinity }}
-      className="absolute top-40 -left-24 rotate-[-6deg] bg-white rounded-xl shadow-[0_30px_90px_-20px_rgba(0,0,0,0.18)] p-6 w-64 border border-neutral-200 z-10"
-    >
-      <p className="text-xs text-neutral-500">Stakeholder Strategy</p>
-      <p className="mt-2 text-sm font-semibold text-neutral-900">
-        Perception Intelligence
-      </p>
-    </motion.div>
-
-    {/* LEFT MEDIUM */}
-    <motion.div
-      animate={{ y: [0, -18, 0] }}
-      transition={{ duration: 8, repeat: Infinity }}
-      className="absolute top-60 -left-8 rotate-[-4deg] bg-white rounded-2xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.18)] p-6 w-80 border border-neutral-200 z-20"
-    >
-      <h4 className="text-sm text-neutral-500">Reputation Framework</h4>
-      <p className="mt-3 text-lg font-semibold text-neutral-900">
-        Institutional Narrative Design
-      </p>
-    </motion.div>
-
-    {/* CENTER LARGE (PRIMARY) */}
-    <motion.div
-      animate={{ y: [0, -22, 0] }}
-      transition={{ duration: 9, repeat: Infinity }}
-      className="absolute top-80 z-30 bg-white rounded-3xl shadow-[0_60px_160px_-30px_rgba(0,0,0,0.25)] p-10 w-[460px] border border-neutral-200"
-    >
-      <h4 className="text-sm text-neutral-500">
-        Active Strategic Mandates
-      </h4>
-
-      <p className="mt-6 text-5xl font-semibold text-neutral-900">
-        12+
-      </p>
-    </motion.div>
-
-    {/* RIGHT MID CONNECTOR (NEW) */}
-    <motion.div
-      animate={{ y: [0, -15, 0] }}
-      transition={{ duration: 8.2, repeat: Infinity }}
-      className="absolute top-60 right-[-6rem] rotate-[5deg] bg-white rounded-xl shadow-[0_30px_90px_-20px_rgba(0,0,0,0.18)] p-6 w-64 border border-neutral-200 z-10"
-    >
-      <p className="text-xs text-neutral-500">
-        Governance Advisory
-      </p>
-      <p className="mt-2 text-sm font-semibold text-neutral-900">
-        Long-Term Legitimacy
-      </p>
-    </motion.div>
-
-    {/* RIGHT MEDIUM */}
-    <motion.div
-      animate={{ y: [0, -16, 0] }}
-      transition={{ duration: 7.5, repeat: Infinity }}
-      className="absolute top-40 right-[-12rem] rotate-[6deg] bg-white rounded-2xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.18)] p-6 w-80 border border-neutral-200 z-20"
-    >
-      <h4 className="text-sm text-neutral-500">
-        Crisis Advisory
-      </h4>
-      <p className="mt-4 text-xl font-semibold text-neutral-900">
-        High-Stakes Communication
-      </p>
-    </motion.div>
-
-    {/* FAR RIGHT SMALL */}
-    <motion.div
-      animate={{ y: [0, -12, 0] }}
-      transition={{ duration: 6.5, repeat: Infinity }}
-      className="absolute top-20 right-[-20rem] rotate-[10deg] bg-white rounded-xl shadow-[0_25px_70px_-20px_rgba(0,0,0,0.15)] p-5 w-56 border border-neutral-200"
-    >
-      <p className="text-xs text-neutral-500">
-        Media Architecture
-      </p>
-      <p className="mt-2 text-sm font-semibold text-neutral-900">
-        Controlled Amplification
-      </p>
-    </motion.div>
-
-  </div>
-</div>
-
-      {/* Thin Bar Link at Bottom */}
-      <div className="absolute bottom-0 left-0 w-full h-8 bg-neutral-900 flex items-center justify-center">
-        <Link href="/capabilities" className="text-white text-sm hover:text-neutral-300 transition">
-          Explore Our Work ↓
-        </Link>
-      </div>
-
     </section>
   );
 }
