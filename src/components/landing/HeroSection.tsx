@@ -1,5 +1,6 @@
 import CardSwap, { Card } from '@/components/CardSwap'
 import ExploreWorkBar from '@/components/ExploreWorkBar'
+import Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -20,7 +21,7 @@ export default function Hero() {
               tracking-[-0.5px] 
               lg:tracking-[-1px]
             ">
-              Strategic Communication for and Public Trust
+              Strategic Communication for 
               <br />
               Institutions, Influence,{" "}
               <span className="text-[#ff5a1f] relative inline-block">
@@ -42,16 +43,16 @@ export default function Hero() {
             </p>
 
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
-              <button className="bg-[#ff5a1f] text-white px-8 py-4 rounded-md text-[16px] font-semibold hover:opacity-90 transition w-full sm:w-auto">
+              <Link href="/genz" className="bg-[#ff5a1f] text-white px-8 py-4 rounded-md text-[16px] font-semibold hover:opacity-90 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out transform w-full sm:w-auto">
                 Book a demo →
-              </button>
+              </Link>
 
-              <button className="flex items-center justify-center sm:justify-start gap-3 text-[#111111] font-medium text-[16px]">
+              <Link href="/genz" className="flex items-center justify-center sm:justify-start gap-3 text-[#111111] font-medium text-[16px] hover:text-[#ff5a1f] transition-colors duration-300 group">
                 Book a call
-                <span className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm">
+                <span className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm group-hover:bg-[#ff5a1f] group-hover:translate-x-1 transition-all duration-300 ease-in-out">
                   →
                 </span>
-              </button>
+              </Link>
             </div>
 
             <div className="mt-12 sm:mt-14">
