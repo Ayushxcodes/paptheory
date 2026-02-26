@@ -1,8 +1,11 @@
+import GenZHero from '@/components/Genz/HeroSectionGen'
 import React from 'react'
 
 const GenZpage = () => {
   return (
-    <div>GenZ</div>
+    <div>
+      <GenZHero />
+    </div>
   )
 }
 
