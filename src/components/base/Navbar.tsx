@@ -9,17 +9,17 @@ export default function Navbar() {
 
   return (
 
-    <header className="w-full bg-white border-b border-neutral-200">
+    <header className="absolute top-0 left-0 right-0 z-50 bg-white border-b border-neutral-200">
       <div className="mx-auto max-w-[1200px] px-6 h-[72px] flex items-center justify-between">
         {/* Left: Logo */}
-        <div className="flex items-center gap-2 font-semibold text-lg cursor-pointer">
+        <a href="/" className="flex items-center gap-2 font-semibold text-lg cursor-pointer">
           <div className="flex gap-[3px]">
             <span className="w-[6px] h-[14px] bg-black rounded-sm" />
             <span className="w-[6px] h-[20px] bg-black rounded-sm" />
             <span className="w-[6px] h-[10px] bg-black rounded-sm self-end" />
           </div>
           <span className="tracking-tight">Paper Theory</span>
-        </div>
+        </a>
 
         {/* Desktop Nav links shifted to right */}
         <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-700 relative">
@@ -39,8 +39,8 @@ export default function Navbar() {
             label="Customers"
             items={["Case studies", "Testimonials"]}
           />
-          <a href="#" className="hover:text-neutral-900 transition">
-            Pricing
+          <a href="/genz" className="hover:text-neutral-900 transition">
+            GenZ
           </a>
         </nav>
 
@@ -73,8 +73,8 @@ export default function Navbar() {
               label="Customers"
               items={["Case studies", "Testimonials"]}
             />
-            <a href="#" className="block py-2 text-sm text-neutral-700 hover:text-neutral-900">
-              Pricing
+            <a href="/genz" className="block py-2 text-sm text-neutral-700 hover:text-neutral-900">
+              GenZ
             </a>
           </div>
         </div>
