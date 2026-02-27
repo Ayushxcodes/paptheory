@@ -25,20 +25,17 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-700 relative">
           <NavItem
             label="Platform"
-            items={["Overview", "Research", "Prototypes", "Analytics"]}
+            items={["Overview", "Research", "Teams"]}
           />
-          <NavItem
-            label="Solutions"
-            items={["Product teams", "UX research", "Enterprise"]}
-          />
-          <NavItem
-            label="Resources"
-            items={["Blog", "Guides", "Help center"]}
-          />
-          <NavItem
-            label="Customers"
-            items={["Case studies", "Testimonials"]}
-          />
+          <a href="/solutions" className="hover:text-neutral-900 transition">
+            Solutions
+          </a>
+          <a href="/resources" className="hover:text-neutral-900 transition">
+            Resources
+          </a>
+          <a href="/customers" className="hover:text-neutral-900 transition">
+            Customers
+          </a>
           <a href="/genz" className="hover:text-neutral-900 transition">
             GenZ
           </a>
@@ -59,20 +56,17 @@ export default function Navbar() {
           <div className="px-6 py-4 space-y-4">
             <MobileNavItem
               label="Platform"
-              items={["Overview", "Research", "Prototypes", "Analytics"]}
+              items={["Overview", "Research", "Teams"]}
             />
-            <MobileNavItem
-              label="Solutions"
-              items={["Product teams", "UX research", "Enterprise"]}
-            />
-            <MobileNavItem
-              label="Resources"
-              items={["Blog", "Guides", "Help center"]}
-            />
-            <MobileNavItem
-              label="Customers"
-              items={["Case studies", "Testimonials"]}
-            />
+            <a href="/solutions" className="block py-2 text-sm text-neutral-700 hover:text-neutral-900">
+              Solutions
+            </a>
+            <a href="/resources" className="block py-2 text-sm text-neutral-700 hover:text-neutral-900">
+              Resources
+            </a>
+            <a href="/customers" className="block py-2 text-sm text-neutral-700 hover:text-neutral-900">
+              Customers
+            </a>
             <a href="/genz" className="block py-2 text-sm text-neutral-700 hover:text-neutral-900">
               GenZ
             </a>
@@ -85,12 +79,26 @@ export default function Navbar() {
 
 function NavItem({ label, items }: { label: string; items: string[] }) {
   const [open, setOpen] = useState(false);
+  const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = () => {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+      setTimeoutId(null);
+    }
+    setOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    const id = setTimeout(() => setOpen(false), 150); // 150ms delay
+    setTimeoutId(id);
+  };
 
   return (
     <div
       className="relative"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <button className="flex items-center gap-1 hover:text-neutral-900 transition">
         <span>{label}</span>
@@ -107,7 +115,7 @@ function NavItem({ label, items }: { label: string; items: string[] }) {
             {items.map((item) => (
               <li key={item}>
                 <a
-                  href="#"
+                  href={`/${item.toLowerCase()}`}
                   className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-neutral-900 transition"
                 >
                   {item}
@@ -140,7 +148,7 @@ function MobileNavItem({ label, items }: { label: string; items: string[] }) {
           {items.map((item) => (
             <li key={item}>
               <a
-                href="#"
+                href={`/${item.toLowerCase()}`}
                 className="block py-1 text-sm text-neutral-600 hover:text-neutral-900"
               >
                 {item}

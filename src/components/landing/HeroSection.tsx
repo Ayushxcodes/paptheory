@@ -1,6 +1,7 @@
 import CardSwap, { Card } from '@/components/CardSwap'
 import ExploreWorkBar from '@/components/ExploreWorkBar'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -83,42 +84,36 @@ export default function Hero() {
 >
   {/* CARD 1 */}
   <Card className="bg-white border-2 border-[#ff5a1f] p-0 overflow-hidden rounded-xl shadow-lg h-full">
-    <div className="relative w-full h-full bg-orange-500">
-      <iframe
-        loading="lazy"
-        title="Gumlet video 1"
-        src="https://play.gumlet.io/embed/6985d218924a60df4bf0fda8?autoplay=1&muted=1&loop=1&playsinline=1"
-        className="absolute inset-0 w-full h-full border-0 block"
-        referrerPolicy="origin"
-        allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    <div className="relative w-full h-full">
+      <Image
+        src="/image5.jpg"
+        alt="Strategic Communication"
+        fill
+        className="object-cover"
       />
     </div>
   </Card>
 
   {/* CARD 2 */}
   <Card className="bg-white border-2 border-[#ff5a1f] p-0 overflow-hidden rounded-xl shadow-lg h-full">
-    <div className="relative w-full h-full bg-orange-500">
-      <iframe
-        loading="lazy"
-        title="Gumlet video 2"
-        src="https://play.gumlet.io/embed/6985d218742559dc5a11a435?autoplay=1&muted=1&loop=1&playsinline=1"
-        className="absolute inset-0 w-full h-full border-0 block"
-        referrerPolicy="origin"
-        allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    <div className="relative w-full h-full">
+      <Image
+        src="/image7.jpg"
+        alt="Institutional Trust"
+        fill
+        className="object-cover"
       />
     </div>
   </Card>
 
   {/* CARD 3 */}
   <Card className="bg-white border-2 border-[#ff5a1f] p-0 overflow-hidden rounded-xl shadow-lg h-full">
-    <div className="relative w-full h-full bg-orange-500">
-      <iframe
-        loading="lazy"
-        title="Gumlet video 3"
-        src="https://play.gumlet.io/embed/6985d2184db88a967f203e86?autoplay=1&muted=1&loop=1&playsinline=1"
-        className="absolute inset-0 w-full h-full border-0 block"
-        referrerPolicy="origin"
-        allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    <div className="relative w-full h-full">
+      <Image
+        src="/image6.jpg"
+        alt="Public Domain"
+        fill
+        className="object-cover"
       />
     </div>
   </Card>
