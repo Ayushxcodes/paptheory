@@ -18,7 +18,7 @@ export default function Navbar() {
             alt="Paper Theory Logo"
             width={320}
             height={60}
-            className="h-18 md:h-28 w-auto"
+            className="h-18 md:h-20 w-auto"
           />
         </a>
 
