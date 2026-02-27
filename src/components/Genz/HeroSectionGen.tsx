@@ -15,12 +15,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-6xl md:text-8xl font-black leading-[0.95] text-black"
+          className="text-6xl md:text-7xl font-black leading-[0.95] text-black"
         >
-          Find Your
+          Good brands are remembered
           <br />
           <span className="text-yellow-500 drop-shadow-[4px_4px_0px_black]">
-            Vibe Tribe
+             Great brands are felt. 
           </span>
         </motion.h1>
 
@@ -30,7 +30,7 @@ export default function Hero() {
           transition={{ delay: 0.2 }}
           className="mt-6 text-xl text-black/70 max-w-2xl mx-auto"
         >
-          Real moments. Real energy. Pure Gen-Z culture.
+          We build brands Gen Z actually cares about.
         </motion.p>
 
         <motion.div
@@ -40,10 +40,10 @@ export default function Hero() {
           className="mt-8 flex flex-col sm:flex-row gap-4 justify-center"
         >
           <button className="bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors">
-            Join the Tribe
+            Make Me Viral
           </button>
           <button className="border-2 border-black text-black px-8 py-3 rounded-full font-semibold hover:bg-black hover:text-white transition-colors">
-            Explore Vibes
+            Let’s Build Culture
           </button>
         </motion.div>
       </div>

@@ -86,7 +86,7 @@ export default function Hero() {
   <Card className="bg-white border-2 border-[#ff5a1f] p-0 overflow-hidden rounded-xl shadow-lg h-full">
     <div className="relative w-full h-full">
       <Image
-        src="/image5.jpg"
+        src="/image2.png"
         alt="Strategic Communication"
         fill
         className="object-cover"
@@ -98,7 +98,7 @@ export default function Hero() {
   <Card className="bg-white border-2 border-[#ff5a1f] p-0 overflow-hidden rounded-xl shadow-lg h-full">
     <div className="relative w-full h-full">
       <Image
-        src="/image7.jpg"
+        src="/image1.png"
         alt="Institutional Trust"
         fill
         className="object-cover"
@@ -110,7 +110,7 @@ export default function Hero() {
   <Card className="bg-white border-2 border-[#ff5a1f] p-0 overflow-hidden rounded-xl shadow-lg h-full">
     <div className="relative w-full h-full">
       <Image
-        src="/image6.jpg"
+        src="/image3.jpeg"
         alt="Public Domain"
         fill
         className="object-cover"

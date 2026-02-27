@@ -13,7 +13,7 @@ export default function CapabilitiesSection() {
             <span className="text-[#111111]">Strategy & </span><span className="text-[#ff5a1f]">Advisory</span>
           </h3>
 
-          <p className="mt-6 text-lg text-[#333333] leading-relaxed">
+          <p className="mt-6 text-xl text-[#333333] leading-relaxed">
             We advise institutions on how to communicate <span className="text-[#ff5a1f] font-medium">power responsibly</span>.
           </p>
 
@@ -25,7 +25,7 @@ export default function CapabilitiesSection() {
             <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• <span className="text-[#111111] font-medium">Long-term</span> trust and positioning strategy</p>
           </div>
 
-          <p className="mt-8 text-[#6b6b6b] text-sm leading-relaxed">
+          <p className="mt-8 text-[#ff5a1f] text-base leading-relaxed">
             This work is typically delivered through long-term mandates and
             retainers, in close collaboration with senior leadership.
           </p>
@@ -40,11 +40,11 @@ export default function CapabilitiesSection() {
             <span className="text-[#111111]">Strategic </span><span className="text-[#ff5a1f]">Creative</span><span className="text-[#111111]"> & Content</span>
           </h3>
 
-          <p className="mt-6 text-[#333333] leading-relaxed font-medium">
+          <p className="mt-6 text-xl text-[#333333] leading-relaxed font-medium">
             <span className="text-[#111111]">Strategy must translate into </span><span className="text-[#ff5a1f]">form</span>.
           </p>
 
-          <p className="mt-4 text-[#444444] leading-relaxed">
+          <p className="mt-4 text-xl text-[#444444] leading-relaxed">
             We design <span className="text-[#ff5a1f] font-medium">narrative-led</span> content and audio-visual communication that
             reflects institutional tone, message discipline, and strategic intent —
             across platforms and audiences.
@@ -57,7 +57,7 @@ export default function CapabilitiesSection() {
             <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• <span className="text-[#111111] font-medium">Issue-based</span> and campaign communication</p>
           </div>
 
-          <p className="mt-6 text-[#6b6b6b] text-sm leading-relaxed">
+          <p className="mt-6 text-[#ff5a1f] text-base leading-relaxed">
             Creative execution exists to serve strategy, not replace it.
           </p>
         </div>
@@ -71,11 +71,11 @@ export default function CapabilitiesSection() {
             <span className="text-[#111111]">Controlled </span><span className="text-[#ff5a1f]">Media</span><span className="text-[#111111]"> & Amplification</span>
           </h3>
 
-          <p className="mt-6 text-[#333333] leading-relaxed font-medium">
+          <p className="mt-6 text-xl text-[#333333] leading-relaxed font-medium">
             <span className="text-[#111111]">Amplification without </span><span className="text-[#ff5a1f]">discipline</span><span className="text-[#111111]"> weakens credibility.</span>
           </p>
 
-          <p className="mt-4 text-[#444444] leading-relaxed">
+          <p className="mt-4 text-xl text-[#444444] leading-relaxed">
             We manage distribution and media amplification <span className="text-[#ff5a1f] font-medium">selectively</span>,
             ensuring messages are delivered with accuracy, restraint,
             and contextual awareness.
@@ -87,7 +87,7 @@ export default function CapabilitiesSection() {
             <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• <span className="text-[#111111] font-medium">Message</span> protection and rollout discipline</p>
           </div>
 
-          <p className="mt-6 text-[#6b6b6b] text-sm leading-relaxed">
+          <p className="mt-6 text-[#ff5a1f] text-base leading-relaxed">
             Media is used when it strengthens trust — not simply to increase reach.
           </p>
         </div>
