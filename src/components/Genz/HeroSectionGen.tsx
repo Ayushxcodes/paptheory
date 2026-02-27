@@ -39,9 +39,9 @@ export default function Hero() {
           transition={{ delay: 0.4 }}
           className="mt-8 flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <button className="bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors">
+          <a href="/contact" className="bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors inline-block text-center">
             Make Me Viral
-          </button>
+          </a>
           <button className="border-2 border-black text-black px-8 py-3 rounded-full font-semibold hover:bg-black hover:text-white transition-colors">
             Let’s Build Culture
           </button>
