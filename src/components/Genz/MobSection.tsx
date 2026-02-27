@@ -38,19 +38,18 @@ export default function ScrollStoppingSection() {
       </svg>
 
       {/* Phones */}
-      <div className="relative z-20 flex justify-center items-center px-6 mt-20 md:mt-32">
-        <video
-          className="w-full max-w-6xl h-auto object-contain"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source src="./vid1.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
+     <div className="relative z-20 flex justify-center items-center px-6 mt-20 md:mt-32">
+  <div className="w-full max-w-6xl aspect-video">
+    <video
+      src="/vid1.mp4"
+      autoPlay
+      muted
+      loop
+      playsInline
+      className="w-full h-full object-contain"
+    />
+  </div>
+</div>
       {/* Bottom spacing so blob doesn't cut phones */}
       <div className="h-20 md:h-32" />
 
