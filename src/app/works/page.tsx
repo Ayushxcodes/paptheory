@@ -1,92 +1,113 @@
 import React from 'react'
 
 const WorksPage = () => {
-  // Array of Gumlet video URLs - replace these with your actual video links
-  const videoUrls = [
-    "https://play.gumlet.io/embed/6985d218924a60df4bf0fda8?playsinline=1",
-    "https://play.gumlet.io/embed/6985d218742559dc5a11a435?playsinline=1",
-    "https://play.gumlet.io/embed/6985d2184db88a967f203e86?playsinline=1",
-    "https://play.gumlet.io/embed/6985d218924a60df4bf0fda8?playsinline=1",
-    "https://play.gumlet.io/embed/6985d218742559dc5a11a435?playsinline=1",
-    "https://play.gumlet.io/embed/6985d2184db88a967f203e86?playsinline=1",
-    "https://play.gumlet.io/embed/6985d218924a60df4bf0fda8?playsinline=1",
-    "https://play.gumlet.io/embed/6985d218742559dc5a11a435?playsinline=1",
-    "https://play.gumlet.io/embed/6985d2184db88a967f203e86?playsinline=1",
+
+  // Converted Gumlet IDs into proper embed links
+  const videoIds = [
+    "680100853f934d7b33b2d517",
+    "6985d218924a60df4bf0fda8",
+    "6985d218742559dc5a11a435",
+    "6985d2184db88a967f203e86",
+    "6985d218742559dc5a11a433",
+    "6985d218742559dc5a11a437",
+    "6985d218742559dc5a11a42d",
+    "6985cd64742559dc5a10fcf1",
+    "6904627faa9e79860d5356fa",
+    "6904627fa73e176902710649",
+    "6904627fa5b40b283e125f54",
+    "6904627fa73e176902710644",
+    "68a58031faf881d01d012b62",
+    "68a57fe681b867dff3334498",
+    "680104cd3f934d7b33b2f50e",
+    "680102a2fc3cb0b3238a7593",
+    "68010085fc3cb0b3238a62ee",
+    "680100853ab3a7b826bb539e",
+    "680100853f934d7b33b2d519",
+    "68010085fc3cb0b3238a62f6",
+    "680100853ab3a7b826bb539a"
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header Section */}
+
+      {/* Header */}
       <div className="pt-32 pb-16 px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black mb-6">
             Our <span className="text-[#ff5a1f]">Works</span>
           </h1>
+
           <p className="text-lg md:text-xl text-black max-w-2xl mx-auto leading-relaxed">
-            Explore our portfolio of <span className="text-[#ff5a1f] font-medium">strategic communications</span> and creative campaigns that drive real impact.
+            Explore our portfolio of{" "}
+            <span className="text-[#ff5a1f] font-medium">
+              strategic communications
+            </span>{" "}
+            and creative campaigns that drive real impact.
           </p>
+
           <div className="mt-10 h-px w-full bg-[#ff5a1f]/30 max-w-md mx-auto" />
         </div>
       </div>
 
-      {/* Video Grid Section */}
+      {/* Video Grid */}
       <div className="px-6 lg:px-8 pb-24">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {videoUrls.map((url, index) => (
+
+          {/* ALWAYS max 3 columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            {videoIds.map((id, index) => (
               <div
                 key={index}
-                className="group relative bg-gray-500 rounded-xl overflow-hidden shadow-lg border border-gray-800 hover:border-[#ff5a1f]/50 transition-all duration-300 hover:shadow-[#ff5a1f]/20 hover:shadow-2xl"
+                className="group bg-white rounded-xl overflow-hidden shadow-lg border border-black hover:border-[#ff5a1f]/60 transition-all duration-300 hover:shadow-2xl hover:shadow-[#ff5a1f]/20"
               >
+                {/* 16:9 ratio */}
                 <div className="relative aspect-video">
                   <iframe
-                    src={url}
+                    src={`https://play.gumlet.io/embed/${id}?autoplay=1&muted=1&loop=1&playsinline=1&controls=0`}
                     className="absolute inset-0 w-full h-full border-0"
-                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen"
+                    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                     allowFullScreen
                     loading="lazy"
                     title={`Work Video ${index + 1}`}
                   />
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300 pointer-events-none" />
-                  {/* Play button overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                    <div className="w-16 h-16 bg-[#ff5a1f] rounded-full flex items-center justify-center shadow-lg">
-                      <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M8 5v10l8-5-8-5z" />
-                      </svg>
-                    </div>
-                  </div>
                 </div>
-                {/* Video info */}
-                <div className="p-4">
-                  <h3 className="text-white font-semibold text-lg mb-2">
-                    Project {String(index + 1).padStart(2, '0')}
+
+                <div className="p-5">
+                  <h3 className="text-black font-semibold text-lg mb-2">
+                    Project {String(index + 1).padStart(2, "0")}
                   </h3>
-                  <p className="text-[#cccccc] text-sm">
-                    Strategic communication campaign showcasing our expertise in narrative building and audience engagement.
+
+                  <p className="text-gray-900 text-sm leading-relaxed">
+                    Strategic communication campaign showcasing expertise in
+                    narrative building and audience engagement.
                   </p>
                 </div>
               </div>
             ))}
+
           </div>
         </div>
       </div>
 
-      {/* Call to Action Section */}
+      {/* CTA */}
       <div className="bg-gray-900 py-16 px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
             Ready to <span className="text-[#ff5a1f]">Collaborate</span>?
           </h2>
-          <p className="text-[#cccccc] mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help tell your story and achieve your communication goals.
+
+          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+            Let's discuss how we can help tell your story and achieve your
+            communication goals.
           </p>
+
           <button className="bg-[#ff5a1f] text-white px-8 py-3 rounded-lg hover:bg-[#e54d1f] transition-colors duration-300 font-medium border-2 border-[#ff5a1f] hover:border-[#e54d1f]">
             Start a Conversation
           </button>
         </div>
       </div>
+
     </div>
   )
 }
