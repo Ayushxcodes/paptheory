@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -12,13 +13,14 @@ export default function Navbar() {
     <header className="absolute top-0 left-0 right-0 z-50 bg-white border-b border-neutral-200">
       <div className="mx-auto max-w-[1200px] px-6 h-[72px] flex items-center justify-between">
         {/* Left: Logo */}
-        <a href="/" className="flex items-center gap-2 font-semibold text-lg cursor-pointer">
-          <div className="flex gap-[3px]">
-            <span className="w-[6px] h-[14px] bg-black rounded-sm" />
-            <span className="w-[6px] h-[20px] bg-black rounded-sm" />
-            <span className="w-[6px] h-[10px] bg-black rounded-sm self-end" />
-          </div>
-          <span className="tracking-tight">Paper Theory</span>
+        <a href="/" className="flex items-center gap-2 cursor-pointer">
+          <Image
+            src="/web_logo.png"
+            alt="Paper Theory Logo"
+            width={320}
+            height={60}
+            className="h-34 w-auto"
+          />
         </a>
 
         {/* Desktop Nav links shifted to right */}
