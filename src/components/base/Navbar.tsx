@@ -25,7 +25,7 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-700 relative">
           <NavItem
             label="Platform"
-            items={["Overview", "Research", "Teams"]}
+            items={["Homepage", "Research", "Teams"]}
           />
           <a href="/solutions" className="hover:text-neutral-900 transition">
             Solutions
@@ -56,7 +56,7 @@ export default function Navbar() {
           <div className="px-6 py-4 space-y-4">
             <MobileNavItem
               label="Platform"
-              items={["Overview", "Research", "Teams"]}
+              items={["Homepage", "Research", "Teams"]}
             />
             <a href="/solutions" className="block py-2 text-sm text-neutral-700 hover:text-neutral-900">
               Solutions
@@ -115,7 +115,7 @@ function NavItem({ label, items }: { label: string; items: string[] }) {
             {items.map((item) => (
               <li key={item}>
                 <a
-                  href={`/${item.toLowerCase()}`}
+                  href={item.toLowerCase() === 'homepage' ? '/' : `/${item.toLowerCase()}`}
                   className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-neutral-900 transition"
                 >
                   {item}
@@ -148,7 +148,7 @@ function MobileNavItem({ label, items }: { label: string; items: string[] }) {
           {items.map((item) => (
             <li key={item}>
               <a
-                href={`/${item.toLowerCase()}`}
+                href={item.toLowerCase() === 'homepage' ? '/' : `/${item.toLowerCase()}`}
                 className="block py-1 text-sm text-neutral-600 hover:text-neutral-900"
               >
                 {item}

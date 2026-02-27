@@ -41,7 +41,7 @@ export default function WhoWeWorkWith() {
           loading="lazy"
           title="Video 3"
           src="https://play.gumlet.io/embed/6985d2184db88a967f203e86?autoplay=1&muted=1&loop=1&playsinline=1"
-          className="absolute inset-0 w-full h-full border-0"
+          className="absolute inset-0 w-full h-full border-0 object-cover"
           allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
         />
       </div>
@@ -51,8 +51,8 @@ export default function WhoWeWorkWith() {
   </div>
 </div>
 
-          {/* RIGHT SIDE CONTENT */}
-          <div className="max-w-[620px] ml-auto">
+          {/* CENTER CONTENT */}
+          <div className="max-w-[580px] mx-auto text-center lg:text-left">
             
             <h2 className="text-[28px] sm:text-[36px] lg:text-[44px] font-extrabold text-[#111111] tracking-[-0.5px]">
               Who We Work With
@@ -65,29 +65,29 @@ export default function WhoWeWorkWith() {
 
             <div className="mt-8 sm:mt-10 space-y-5 sm:space-y-6">
               
-              <div className="flex items-start gap-4">
-                <span className="mt-2 w-2 h-2 bg-[#ff5a1f]" />
+              <div className="flex items-start gap-4 justify-center lg:justify-start">
+                <span className="mt-2 w-2 h-2 bg-[#ff5a1f] flex-shrink-0" />
                 <p className="text-[15px] sm:text-[16px] text-[#111111]">
                   Governments and public institutions
                 </p>
               </div>
 
-              <div className="flex items-start gap-4">
-                <span className="mt-2 w-2 h-2 bg-[#ff5a1f]" />
+              <div className="flex items-start gap-4 justify-center lg:justify-start">
+                <span className="mt-2 w-2 h-2 bg-[#ff5a1f] flex-shrink-0" />
                 <p className="text-[15px] sm:text-[16px] text-[#111111]">
                   Political leadership and senior advisors
                 </p>
               </div>
 
-              <div className="flex items-start gap-4">
-                <span className="mt-2 w-2 h-2 bg-[#ff5a1f]" />
+              <div className="flex items-start gap-4 justify-center lg:justify-start">
+                <span className="mt-2 w-2 h-2 bg-[#ff5a1f] flex-shrink-0" />
                 <p className="text-[15px] sm:text-[16px] text-[#111111]">
                   Corporations operating under public and regulatory scrutiny
                 </p>
               </div>
 
-              <div className="flex items-start gap-4">
-                <span className="mt-2 w-2 h-2 bg-[#ff5a1f]" />
+              <div className="flex items-start gap-4 justify-center lg:justify-start">
+                <span className="mt-2 w-2 h-2 bg-[#ff5a1f] flex-shrink-0" />
                 <p className="text-[15px] sm:text-[16px] text-[#111111]">
                   Financial, infrastructure, healthcare, education, and legacy institutions
                 </p>
@@ -96,6 +96,9 @@ export default function WhoWeWorkWith() {
             </div>
 
           </div>
+
+          {/* RIGHT SIDE — Empty for balance */}
+          <div className="hidden lg:block"></div>
         </div>
       </div>
       <ExploreWorkBar />
