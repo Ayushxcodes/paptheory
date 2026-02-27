@@ -5,6 +5,7 @@ import HeroSection from '@/components/landing/HeroSection'
 import OurApproachSection from '@/components/landing/OurApproachSection'
 import PhilosophySection from '@/components/landing/PhilosophySection'
 import SelectedWorkSection from '@/components/landing/SelectedWorkSection'
+import TickerSection from '@/components/landing/TickerSection'
 import VerticalsSection from '@/components/landing/VerticalSection'
 import WhoYouWorkWithSection from '@/components/landing/WhoWorkWithSection'
 import { AppleHelloVietnameseEffect } from '@/components/ui/apple-hello-effect'
@@ -39,6 +40,7 @@ const Homepage = () => {
           <WhoYouWorkWithSection />
           <OurApproachSection />
           <VerticalsSection />
+          <TickerSection />
           <SelectedWorkSection />
           <PhilosophySection />
         </motion.div>
