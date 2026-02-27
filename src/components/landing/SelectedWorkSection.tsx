@@ -3,8 +3,18 @@
 import Link from "next/link";
 
 export default function SelectedWorkSection() {
+  // Array of Gumlet video URLs for the infinite loop
+  const videoUrls = [
+    "https://play.gumlet.io/embed/6985d218924a60df4bf0fda8?autoplay=1&muted=1&loop=1&playsinline=1",
+    "https://play.gumlet.io/embed/6985d218742559dc5a11a435?autoplay=1&muted=1&loop=1&playsinline=1",
+    "https://play.gumlet.io/embed/6985d2184db88a967f203e86?autoplay=1&muted=1&loop=1&playsinline=1",
+    "https://play.gumlet.io/embed/6985d218924a60df4bf0fda8?autoplay=1&muted=1&loop=1&playsinline=1", // Duplicate for seamless loop
+    "https://play.gumlet.io/embed/6985d218742559dc5a11a435?autoplay=1&muted=1&loop=1&playsinline=1", // Duplicate for seamless loop
+    "https://play.gumlet.io/embed/6985d2184db88a967f203e86?autoplay=1&muted=1&loop=1&playsinline=1", // Duplicate for seamless loop
+  ];
+
   return (
-    <section className="relative py-20 md:py-40 bg-white">
+    <section className="relative py-20 md:py-40 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Section Header */}
@@ -27,133 +37,101 @@ export default function SelectedWorkSection() {
           <div className="mt-10 h-px w-full bg-[#ff5a1f]/30" />
         </div>
 
-        {/* STACK WRAPPER */}
-        <div className="relative mt-32 space-y-32">
-
-          {/* ================= CARD 1 ================= */}
-          <div className="sticky top-24 z-10">
-            <div className="bg-white rounded-3xl shadow-lg p-10 md:p-16 border border-[#ff5a1f]/20">
-
-              <div className="grid md:grid-cols-3 gap-8 md:gap-16">
-                <div className="text-sm text-[#ff5a1f] uppercase tracking-wide font-medium">
-                  Case Study I
-                </div>
-
-                <div className="md:col-span-2 space-y-12">
-
-                  <div>
-                    <h4 className="text-xl font-semibold text-[#111111]">
-                      Context
-                    </h4>
-                    <p className="mt-4 text-[#555555] leading-relaxed">
-                      A nationally significant institution faced heightened public
-                      scrutiny following a period of policy transition. The
-                      communication challenge was not volume — but coherence.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h4 className="text-xl font-semibold text-[#111111]">
-                      Strategic Intent
-                    </h4>
-                    <p className="mt-4 text-[#555555] leading-relaxed">
-                      Public perception needed to shift from reactive defense to
-                      steady institutional leadership.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h4 className="text-xl font-semibold text-[#111111]">
-                      Our Role
-                    </h4>
-                    <p className="mt-4 text-[#555555] leading-relaxed">
-                      Lead strategic advisory mandate, narrative framework design,
-                      and leadership positioning.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h4 className="text-xl font-semibold text-[#111111]">
-                      Outcome
-                    </h4>
-                    <p className="mt-4 text-[#555555] leading-relaxed">
-                      Institutional messaging aligned across departments and
-                      public briefings regained coherence.
-                    </p>
-                  </div>
-
-                </div>
+        {/* Infinite Video Loop */}
+        <div className="relative mt-16 overflow-hidden">
+          <div
+            className="flex scroll-animation"
+          >
+            {videoUrls.map((url, index) => (
+              <div
+                key={index}
+                className="shrink-0 w-64 sm:w-80 h-36 sm:h-48 mx-2 sm:mx-4 rounded-xl overflow-hidden shadow-lg border border-gray-200"
+              >
+                <iframe
+                  src={url}
+                  className="w-full h-full border-0"
+                  allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+                  loading="lazy"
+                  title={`Work Video ${index + 1}`}
+                />
               </div>
-
-            </div>
+            ))}
           </div>
-
-          {/* ================= CARD 2 ================= */}
-          <div className="sticky top-28 z-20">
-            <div className="bg-white rounded-3xl shadow-lg p-10 md:p-16 border border-[#ff5a1f]/20">
-
-              <div className="grid md:grid-cols-3 gap-8 md:gap-16">
-                <div className="text-sm text-[#ff5a1f] uppercase tracking-wide font-medium">
-                  Case Study II
-                </div>
-
-                <div className="md:col-span-2 space-y-12">
-
-                  <div>
-                    <h4 className="text-xl font-semibold text-[#111111]">
-                      Context
-                    </h4>
-                    <p className="mt-4 text-[#555555] leading-relaxed">
-                      A private sector organisation operating under regulatory scrutiny
-                      required narrative repositioning.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h4 className="text-xl font-semibold text-[#111111]">
-                      Strategic Intent
-                    </h4>
-                    <p className="mt-4 text-[#555555] leading-relaxed">
-                      Reframe the organisation as a stable, responsible long-term actor.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h4 className="text-xl font-semibold text-[#111111]">
-                      Our Role
-                    </h4>
-                    <p className="mt-4 text-[#555555] leading-relaxed">
-                      Strategic advisory, executive frameworks, and narrative-led direction.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h4 className="text-xl font-semibold text-[#111111]">
-                      Outcome
-                    </h4>
-                    <p className="mt-4 text-[#555555] leading-relaxed">
-                      Leadership communication gained clarity and credibility strengthened.
-                    </p>
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-          </div>
-
         </div>
+
+        {/* Additional static videos for seamless loop */}
+        <div className="relative mt-4 sm:mt-8 overflow-hidden">
+          <div
+            className="flex scroll-animation-reverse"
+          >
+            {videoUrls.slice().reverse().map((url, index) => (
+              <div
+                key={`reverse-${index}`}
+                className="shrink-0 w-64 sm:w-80 h-36 sm:h-48 mx-2 sm:mx-4 rounded-xl overflow-hidden shadow-lg border border-gray-200"
+              >
+                <iframe
+                  src={url}
+                  className="w-full h-full border-0"
+                  allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+                  loading="lazy"
+                  title={`Work Video Reverse ${index + 1}`}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
 
       {/* Bottom CTA Bar */}
-      <div className="absolute bottom-0 left-0 w-full h-7  bg-[#ff5a1f] flex items-center justify-center">
+      <div className="absolute bottom-0 left-0 w-full h-7 bg-[#ff5a1f] flex items-center justify-center">
         <Link
-          href="/capabilities"
+          href="/works"
           className="text-white text-sm hover:opacity-80 transition"
         >
           Explore Our Work ↓
         </Link>
       </div>
+
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+
+          @keyframes scroll-reverse {
+            0% {
+              transform: translateX(-50%);
+            }
+            100% {
+              transform: translateX(0);
+            }
+          }
+
+          .scroll-animation {
+            animation: scroll var(--scroll-duration, 20s) linear infinite;
+          }
+
+          .scroll-animation-reverse {
+            animation: scroll-reverse var(--scroll-duration-reverse, 15s) linear infinite;
+          }
+
+          /* Mobile styles - faster animations */
+          @media (max-width: 640px) {
+            .scroll-animation {
+              --scroll-duration: 12s;
+            }
+            .scroll-animation-reverse {
+              --scroll-duration-reverse: 10s;
+            }
+          }
+        `
+      }} />
     </section>
   );
 }
