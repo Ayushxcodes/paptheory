@@ -12,14 +12,13 @@ export default function Navbar() {
 
     <header className="absolute top-0 left-0 right-0 z-50 bg-white border-b border-neutral-200">
       <div className="mx-auto max-w-[1200px] px-6 h-[72px] flex items-center justify-between">
-        {/* Left: Logo */}
         <a href="/" className="flex items-center gap-2 cursor-pointer">
           <Image
             src="/web_logo.png"
             alt="Paper Theory Logo"
             width={320}
             height={60}
-            className="h-34 w-auto"
+            className="h-18 w-auto"
           />
         </a>
 
