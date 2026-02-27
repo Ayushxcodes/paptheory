@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
+import { motion } from "framer-motion";
 
 export default function CapabilitiesSection() {
   const data = [
@@ -18,17 +19,34 @@ export default function CapabilitiesSection() {
           </p>
 
           <div className="mt-8 space-y-3">
-            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• <span className="text-[#111111] font-medium">Public affairs</span> and institutional communication strategy</p>
-            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• <span className="text-[#111111] font-medium">Narrative</span> and reputation frameworks</p>
-            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• <span className="text-[#111111] font-medium">Stakeholder</span> and public perception analysis</p>
-            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• <span className="text-[#111111] font-medium">Leadership</span> and crisis communication guidance</p>
-            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• <span className="text-[#111111] font-medium">Long-term</span> trust and positioning strategy</p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
+              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Public affairs</span> and institutional communication strategy
+            </p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
+              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Narrative</span> and reputation frameworks
+            </p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
+              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Stakeholder</span> and public perception analysis
+            </p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
+              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Leadership</span> and crisis communication guidance
+            </p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
+              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Long-term</span> trust and positioning strategy
+            </p>
           </div>
 
-          <p className="mt-8 text-[#ff5a1f] text-base leading-relaxed">
-            This work is typically delivered through long-term mandates and
-            retainers, in close collaboration with senior leadership.
-          </p>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="mt-8 p-4 bg-gradient-to-r from-orange-50 to-orange-100 border-l-4 border-[#ff5a1f] rounded-r-lg"
+          >
+            <p className="text-[#ff5a1f] text-base leading-relaxed font-medium">
+              This work is typically delivered through long-term mandates and
+              retainers, in close collaboration with senior leadership.
+            </p>
+          </motion.div>
         </div>
       ),
     },
@@ -51,15 +69,30 @@ export default function CapabilitiesSection() {
           </p>
 
           <div className="mt-6 space-y-2 text-sm">
-            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• <span className="text-[#111111] font-medium">Narrative-led</span> content systems</p>
-            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• <span className="text-[#111111] font-medium">Audio-visual</span> storytelling</p>
-            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• <span className="text-[#111111] font-medium">Leadership</span> and institutional storytelling</p>
-            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• <span className="text-[#111111] font-medium">Issue-based</span> and campaign communication</p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
+              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Narrative-led</span> content systems
+            </p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
+              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Audio-visual</span> storytelling
+            </p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
+              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Leadership</span> and institutional storytelling
+            </p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
+              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Issue-based</span> and campaign communication
+            </p>
           </div>
 
-          <p className="mt-6 text-[#ff5a1f] text-base leading-relaxed">
-            Creative execution exists to serve strategy, not replace it.
-          </p>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="mt-6 p-4 bg-gradient-to-r from-orange-50 to-orange-100 border-l-4 border-[#ff5a1f] rounded-r-lg"
+          >
+            <p className="text-[#ff5a1f] text-base leading-relaxed font-medium">
+              Creative execution exists to serve strategy, not replace it.
+            </p>
+          </motion.div>
         </div>
       ),
     },
@@ -82,33 +115,55 @@ export default function CapabilitiesSection() {
           </p>
 
           <div className="mt-6 space-y-2 text-sm">
-            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• <span className="text-[#111111] font-medium">Strategic</span> media planning</p>
-            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• <span className="text-[#111111] font-medium">Selective</span> influencer engagement</p>
-            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• <span className="text-[#111111] font-medium">Message</span> protection and rollout discipline</p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
+              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Strategic</span> media planning
+            </p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
+              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Selective</span> influencer engagement
+            </p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
+              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Message</span> protection and rollout discipline
+            </p>
           </div>
 
-          <p className="mt-6 text-[#ff5a1f] text-base leading-relaxed">
-            Media is used when it strengthens trust — not simply to increase reach.
-          </p>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="mt-6 p-4 bg-gradient-to-r from-orange-50 to-orange-100 border-l-4 border-[#ff5a1f] rounded-r-lg"
+          >
+            <p className="text-[#ff5a1f] text-base leading-relaxed font-medium">
+              Media is used when it strengthens trust — not simply to increase reach.
+            </p>
+          </motion.div>
         </div>
       ),
     },
   ];
 
   return (
-    <section className="relative pt-16 pb-12 md:pt-24 md:pb-16 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="relative pt-16 pb-12 md:pt-24 md:pb-16 bg-gradient-to-br from-white via-gray-50 to-orange-50 overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,90,31,0.05),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(17,17,17,0.05),transparent_50%)]" />
+
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         
         {/* Section Intro */}
-        <div className="max-w-3xl mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-3xl mb-12"
+        >
           <p className="text-sm text-[#ff5a1f] tracking-wide uppercase font-medium">
             Capabilities
           </p>
           <h2 className="mt-4 text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-semibold tracking-tight">
             <span className="text-[#111111]">Verti</span><span className="text-[#ff5a1f]">cals</span>
           </h2>
-          <div className="mt-8 h-px w-full bg-linear-to-r from-[#ff5a1f] to-[#111111]" />
-        </div>
+          <div className="mt-8 h-px w-full bg-gradient-to-r from-[#ff5a1f] to-[#111111]" />
+        </motion.div>
 
         <Timeline data={data} />
       </div>

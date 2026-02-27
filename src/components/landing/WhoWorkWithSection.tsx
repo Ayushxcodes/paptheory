@@ -1,10 +1,15 @@
 import ReflectiveCard from '@/components/ReflectiveCard';
 import ExploreWorkBar from '@/components/ExploreWorkBar';
+import { motion } from 'framer-motion';
 
 export default function WhoWeWorkWith() {
   return (
-    <section className="bg-white py-20 sm:py-24 lg:py-32">
-      <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
+    <section className="relative bg-gradient-to-br from-white via-blue-50 to-orange-50 py-20 sm:py-24 lg:py-32 overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,90,31,0.08),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(17,17,17,0.05),transparent_60%)]" />
+
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-0 items-center">
           
           {/* LEFT SIDE — Hidden below lg */}
@@ -13,7 +18,12 @@ export default function WhoWeWorkWith() {
   <div className="w-full max-w-[520px]">
 
     {/* TOP VIDEO */}
-    <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg border border-gray-200">
+    <motion.div 
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="relative aspect-video rounded-xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300"
+    >
       <iframe
         loading="lazy"
         title="Video 1"
@@ -21,12 +31,17 @@ export default function WhoWeWorkWith() {
         className="absolute inset-0 w-full h-full border-0"
         allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
       />
-    </div>
+    </motion.div>
 
     {/* BOTTOM ROW */}
     <div className="mt-6 grid grid-cols-2 gap-6">
       
-      <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg border border-gray-200">
+      <motion.div 
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="relative aspect-video rounded-xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300"
+      >
         <iframe
           loading="lazy"
           title="Video 2"
@@ -34,9 +49,14 @@ export default function WhoWeWorkWith() {
           className="absolute inset-0 w-full h-full border-0"
           allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
         />
-      </div>
+      </motion.div>
 
-      <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg border border-gray-200">
+      <motion.div 
+        initial={{ opacity: 0, x: 20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="relative aspect-video rounded-xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300"
+      >
         <iframe
           loading="lazy"
           title="Video 3"
@@ -44,7 +64,7 @@ export default function WhoWeWorkWith() {
           className="absolute inset-0 w-full h-full border-0 object-cover"
           allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
         />
-      </div>
+      </motion.div>
 
     </div>
 
@@ -52,7 +72,12 @@ export default function WhoWeWorkWith() {
 </div>
 
           {/* CENTER CONTENT */}
-          <div className="max-w-[580px] mx-auto text-center lg:text-left">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-[580px] mx-auto text-center lg:text-left"
+          >
             
             <h2 className="text-[28px] sm:text-[36px] lg:text-[44px] font-extrabold text-[#111111] tracking-[-0.5px]">
               Who We Work With
@@ -65,37 +90,57 @@ export default function WhoWeWorkWith() {
 
             <div className="mt-8 sm:mt-10 space-y-5 sm:space-y-6">
               
-              <div className="flex items-start gap-4 justify-center lg:justify-start">
-                <span className="mt-2 w-2 h-2 bg-[#ff5a1f] flex-shrink-0" />
-                <p className="text-[15px] sm:text-[16px] text-[#111111]">
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="flex items-start gap-4 justify-center lg:justify-start group"
+              >
+                <span className="mt-2 w-3 h-3 bg-[#ff5a1f] rounded-full flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
+                <p className="text-[15px] sm:text-[16px] text-[#111111] group-hover:text-[#ff5a1f] transition-colors duration-300">
                   Governments and public institutions
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="flex items-start gap-4 justify-center lg:justify-start">
-                <span className="mt-2 w-2 h-2 bg-[#ff5a1f] flex-shrink-0" />
-                <p className="text-[15px] sm:text-[16px] text-[#111111]">
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="flex items-start gap-4 justify-center lg:justify-start group"
+              >
+                <span className="mt-2 w-3 h-3 bg-[#ff5a1f] rounded-full flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
+                <p className="text-[15px] sm:text-[16px] text-[#111111] group-hover:text-[#ff5a1f] transition-colors duration-300">
                   Political leadership and senior advisors
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="flex items-start gap-4 justify-center lg:justify-start">
-                <span className="mt-2 w-2 h-2 bg-[#ff5a1f] flex-shrink-0" />
-                <p className="text-[15px] sm:text-[16px] text-[#111111]">
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="flex items-start gap-4 justify-center lg:justify-start group"
+              >
+                <span className="mt-2 w-3 h-3 bg-[#ff5a1f] rounded-full flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
+                <p className="text-[15px] sm:text-[16px] text-[#111111] group-hover:text-[#ff5a1f] transition-colors duration-300">
                   Corporations operating under public and regulatory scrutiny
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="flex items-start gap-4 justify-center lg:justify-start">
-                <span className="mt-2 w-2 h-2 bg-[#ff5a1f] flex-shrink-0" />
-                <p className="text-[15px] sm:text-[16px] text-[#111111]">
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="flex items-start gap-4 justify-center lg:justify-start group"
+              >
+                <span className="mt-2 w-3 h-3 bg-[#ff5a1f] rounded-full flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
+                <p className="text-[15px] sm:text-[16px] text-[#111111] group-hover:text-[#ff5a1f] transition-colors duration-300">
                   Financial, infrastructure, healthcare, education, and legacy institutions
                 </p>
-              </div>
+              </motion.div>
 
             </div>
 
-          </div>
+          </motion.div>
 
           {/* RIGHT SIDE — Empty for balance */}
           <div className="hidden lg:block"></div>
