@@ -7,15 +7,12 @@ export default function FlowSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           
           <h2 className="text-[44px] sm:text-[56px] lg:text-[64px] leading-[1.05] font-extrabold text-black tracking-[-1px] max-w-[520px]">
-            Flow with the
+            We craft messaging that feels human,
             <br />
-            moment
+             not hollow.
           </h2>
 
-          <p className="text-[16px] sm:text-[18px] leading-[28px] text-black max-w-[420px] lg:ml-auto">
-            Discover new friends without the pressure—see what you have in
-            common, start fun or meaningful conversations, and connect naturally.
-          </p>
+        
         </div>
 
         {/* CARD ROW */}

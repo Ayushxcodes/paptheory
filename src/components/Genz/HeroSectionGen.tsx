@@ -10,12 +10,12 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(56,189,248,0.35),transparent_40%),radial-gradient(circle_at_80%_70%,rgba(250,204,21,0.35),transparent_40%)]" />
 
       {/* ================= CENTER TEXT ================= */}
-      <div className="relative z-20 text-center max-w-5xl px-6">
+      <div className="relative z-20 text-center max-w-5xl px-4 sm:px-6">
         <motion.h1
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-6xl md:text-7xl font-black leading-[0.95] text-black"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] text-black"
         >
           Good brands are remembered
           <br />
@@ -28,7 +28,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="mt-6 text-xl text-black/70 max-w-2xl mx-auto"
+          className="mt-6 text-lg sm:text-xl text-black/70 max-w-2xl mx-auto"
         >
           We build brands Gen Z actually cares about.
         </motion.p>
@@ -54,7 +54,7 @@ export default function Hero() {
       <motion.div
         animate={{ y: [0, -20, 0] }}
         transition={{ repeat: Infinity, duration: 8 }}
-        className="hidden md:block absolute left-[5%] top-[15%] w-[380px] aspect-video rotate-[-8deg] rounded-3xl overflow-hidden shadow-2xl"
+        className="hidden sm:block absolute left-[5%] top-[15%] w-[280px] sm:w-[380px] md:w-[380px] aspect-video rotate-[-8deg] rounded-3xl overflow-hidden shadow-2xl"
       >
         <iframe
           src="https://play.gumlet.io/embed/68010085fc3cb0b3238a62f0?autoplay=1&muted=1&loop=1"
@@ -67,7 +67,7 @@ export default function Hero() {
       <motion.div
         animate={{ y: [0, 20, 0] }}
         transition={{ repeat: Infinity, duration: 7 }}
-        className="hidden md:block absolute right-[6%] top-[18%] w-[420px] aspect-video rotate-[8deg] rounded-3xl overflow-hidden shadow-2xl"
+        className="hidden sm:block absolute right-[6%] top-[18%] w-[300px] sm:w-[420px] md:w-[420px] aspect-video rotate-[8deg] rounded-3xl overflow-hidden shadow-2xl"
       >
         <iframe
           src="https://play.gumlet.io/embed/680100853ab3a7b826bb5392?autoplay=1&muted=1&loop=1"
@@ -80,7 +80,7 @@ export default function Hero() {
       <motion.div
         animate={{ y: [0, 15, 0] }}
         transition={{ repeat: Infinity, duration: 6 }}
-        className="hidden md:block absolute left-[15%] bottom-[10%] w-[300px] aspect-video rotate-[6deg] rounded-2xl overflow-hidden shadow-xl"
+        className="hidden sm:block absolute left-[15%] bottom-[10%] w-[250px] sm:w-[300px] md:w-[300px] aspect-video rotate-[6deg] rounded-2xl overflow-hidden shadow-xl"
       >
         <iframe
           src="https://play.gumlet.io/embed/680100853f934d7b33b2d511?autoplay=1&muted=1&loop=1"
@@ -93,7 +93,7 @@ export default function Hero() {
       <motion.div
         animate={{ y: [0, -15, 0] }}
         transition={{ repeat: Infinity, duration: 6 }}
-        className="hidden md:block absolute right-[18%] bottom-[12%] w-[340px] aspect-[135/76] rotate-[-6deg] rounded-2xl overflow-hidden shadow-xl"
+        className="hidden sm:block absolute right-[18%] bottom-[12%] w-[280px] sm:w-[340px] md:w-[340px] aspect-[135/76] rotate-[-6deg] rounded-2xl overflow-hidden shadow-xl"
       >
         <iframe
           src="https://play.gumlet.io/embed/680104cd3f934d7b33b2f50e?autoplay=1&muted=1&loop=1"
@@ -107,7 +107,7 @@ export default function Hero() {
       <motion.div
         animate={{ y: [0, -8, 0] }}
         transition={{ repeat: Infinity, duration: 4 }}
-        className="absolute top-[8%] left-[35%] bg-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg rotate-[-12deg]"
+        className="block sm:hidden absolute top-[8%] left-[35%] bg-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg rotate-[-12deg]"
       >
         Real Ones Only ✌️
       </motion.div>
@@ -115,7 +115,7 @@ export default function Hero() {
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 5 }}
-        className="absolute bottom-[18%] right-[32%] bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-semibold shadow-md rotate-[8deg]"
+        className="block sm:hidden absolute bottom-[18%] right-[32%] bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-semibold shadow-md rotate-[8deg]"
       >
         No Filters 🔥
       </motion.div>
@@ -123,7 +123,7 @@ export default function Hero() {
       <motion.div
         animate={{ y: [0, -6, 0] }}
         transition={{ repeat: Infinity, duration: 6 }}
-        className="absolute top-[45%] left-[10%] bg-black text-white px-3 py-1 rounded-full text-xs font-medium rotate-[15deg]"
+        className="block sm:hidden absolute top-[45%] left-[10%] bg-black text-white px-3 py-1 rounded-full text-xs font-medium rotate-[15deg]"
       >
         100% Vibes
       </motion.div>
@@ -133,7 +133,7 @@ export default function Hero() {
       <motion.svg
         animate={{ rotate: [0, 5, -5, 0] }}
         transition={{ repeat: Infinity, duration: 6 }}
-        className="absolute top-[22%] right-[28%] w-20 h-20 text-black"
+        className="block sm:hidden absolute top-[22%] right-[28%] w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 text-black"
         viewBox="0 0 100 100"
         fill="none"
         stroke="currentColor"
@@ -148,7 +148,7 @@ export default function Hero() {
       <motion.svg
         animate={{ x: [0, 5, -5, 0] }}
         transition={{ repeat: Infinity, duration: 7 }}
-        className="absolute bottom-[25%] left-[40%] w-32 h-16 text-pink-500"
+        className="block sm:hidden absolute bottom-[25%] left-[40%] w-24 sm:w-28 md:w-32 h-12 sm:h-14 md:h-16 text-pink-500"
         viewBox="0 0 200 50"
         fill="none"
         stroke="currentColor"

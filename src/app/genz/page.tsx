@@ -4,6 +4,8 @@ import React from 'react'
 import GridsSection from '@/components/Genz/GridsSection'
 import FlowSection from '@/components/Genz/FlowSection'
 import ProminentSection from '@/components/Genz/ProminentSection'
+import MobSection from '@/components/Genz/MobSection'
+import BankingHero from '@/components/Genz/BankingHero'
 
 const GenZpage = () => {
   return (
@@ -12,6 +14,8 @@ const GenZpage = () => {
       <GenZSection />
       <FlowSection />
       <ProminentSection />
+      <MobSection />
+      <BankingHero />
     </div>
   )
 }
