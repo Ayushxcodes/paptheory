@@ -9,7 +9,7 @@ export default function CapabilitiesSection() {
       title: "01",
       content: (
         <div className="max-w-3xl">
-          <h3 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#111111]">
+          <h3 className="text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-semibold tracking-tight text-[#111111]">
             Strategy & Advisory
           </h3>
 
@@ -17,12 +17,12 @@ export default function CapabilitiesSection() {
             We advise institutions on how to communicate power responsibly.
           </p>
 
-          <div className="mt-8 space-y-3 text-[#444444]">
-            <p>Public affairs and institutional communication strategy</p>
-            <p>Narrative and reputation frameworks</p>
-            <p>Stakeholder and public perception analysis</p>
-            <p>Leadership and crisis communication guidance</p>
-            <p>Long-term trust and positioning strategy</p>
+          <div className="mt-8 space-y-3">
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• Public affairs and institutional communication strategy</p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• Narrative and reputation frameworks</p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• Stakeholder and public perception analysis</p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• Leadership and crisis communication guidance</p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• Long-term trust and positioning strategy</p>
           </div>
 
           <p className="mt-8 text-[#6b6b6b] text-sm leading-relaxed">
@@ -36,7 +36,7 @@ export default function CapabilitiesSection() {
       title: "02",
       content: (
         <div className="max-w-2xl">
-          <h3 className="text-2xl md:text-3xl font-medium tracking-tight text-[#111111]">
+          <h3 className="text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-medium tracking-tight text-[#111111]">
             Strategic Creative & Content
           </h3>
 
@@ -50,11 +50,11 @@ export default function CapabilitiesSection() {
             across platforms and audiences.
           </p>
 
-          <div className="mt-6 space-y-2 text-[#444444] text-sm">
-            <p>Narrative-led content systems</p>
-            <p>Audio-visual storytelling</p>
-            <p>Leadership and institutional storytelling</p>
-            <p>Issue-based and campaign communication</p>
+          <div className="mt-6 space-y-2 text-sm">
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• Narrative-led content systems</p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• Audio-visual storytelling</p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• Leadership and institutional storytelling</p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• Issue-based and campaign communication</p>
           </div>
 
           <p className="mt-6 text-[#6b6b6b] text-sm leading-relaxed">
@@ -67,7 +67,7 @@ export default function CapabilitiesSection() {
       title: "03",
       content: (
         <div className="max-w-xl">
-          <h3 className="text-xl md:text-2xl font-medium tracking-tight text-[#111111]">
+          <h3 className="text-xl md:text-2xl lg:text-4xl xl:text-5xl font-medium tracking-tight text-[#111111]">
             Controlled Media & Amplification
           </h3>
 
@@ -81,10 +81,10 @@ export default function CapabilitiesSection() {
             and contextual awareness.
           </p>
 
-          <div className="mt-6 space-y-2 text-[#444444] text-sm">
-            <p>Strategic media planning</p>
-            <p>Selective influencer engagement</p>
-            <p>Message protection and rollout discipline</p>
+          <div className="mt-6 space-y-2 text-sm">
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• Strategic media planning</p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• Selective influencer engagement</p>
+            <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300">• Message protection and rollout discipline</p>
           </div>
 
           <p className="mt-6 text-[#6b6b6b] text-sm leading-relaxed">
@@ -96,15 +96,15 @@ export default function CapabilitiesSection() {
   ];
 
   return (
-    <section className="relative pt-28 pb-20 md:pt-40 md:pb-28 bg-white">
+    <section className="relative pt-16 pb-12 md:pt-24 md:pb-16 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Section Intro */}
-        <div className="max-w-3xl mb-20">
+        <div className="max-w-3xl mb-12">
           <p className="text-sm text-[#ff5a1f] tracking-wide uppercase font-medium">
             Capabilities
           </p>
-          <h2 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight text-[#111111]">
+          <h2 className="mt-4 text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-semibold tracking-tight text-[#111111]">
             Verticals
           </h2>
           <div className="mt-8 h-px w-full bg-[#ff5a1f]" />
