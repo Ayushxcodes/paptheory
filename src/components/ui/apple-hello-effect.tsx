@@ -40,7 +40,7 @@ function AppleHelloVietnameseEffect({
       xmlns="http://www.w3.org/2000/svg"
       {...(props as any)}
     >
-      <title>xin chào</title>
+      <title>PTN</title>
 
       {/* x1 */}
       <motion.path
