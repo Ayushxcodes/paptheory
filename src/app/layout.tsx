@@ -35,8 +35,12 @@ export default function RootLayout({
         <Footer />
         
         {/* Floating GENZ Button */}
-        <Link href="/genz" className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-neutral-900 text-white px-8 py-2 rounded-full shadow-lg hover:bg-neutral-800 transition z-50 animate-bounce">
-          Social Corner →
+        <Link href="/genz" className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-white text-black px-8 py-3 rounded-full shadow-2xl hover:bg-black hover:text-white border-2 border-black transition-all duration-300 z-50 group overflow-hidden hover:shadow-black/50">
+          <span className="relative z-10 flex items-center gap-2 font-semibold text-sm tracking-wide">
+            <span className="group-hover:animate-pulse">⚡</span>
+            Social Corner
+            <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+          </span>
         </Link>
       </body>
     </html>
