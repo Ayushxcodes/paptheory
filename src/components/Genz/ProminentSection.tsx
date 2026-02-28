@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 
 const videos = [
-  "680102a2fc3cb0b3238a7593",
-  "680100853ab3a7b826bb539a",
-  "6904627fa73e176902710646",
-  "680100853ab3a7b826bb539e",
+  "6904627fa5b40b283e125f54",
+  "6904627fa73e176902710644",
+  "68a58031faf881d01d012b62",
+  "689b34a30e12b7df523072f5",
 ];
 
 export default function CulturePyramid() {

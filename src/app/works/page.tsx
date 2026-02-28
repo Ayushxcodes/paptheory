@@ -73,16 +73,7 @@ const WorksPage = () => {
                   />
                 </div>
 
-                <div className="p-5">
-                  <h3 className="text-black font-semibold text-lg mb-2">
-                    Project {String(index + 1).padStart(2, "0")}
-                  </h3>
-
-                  <p className="text-gray-900 text-sm leading-relaxed">
-                    Strategic communication campaign showcasing expertise in
-                    narrative building and audience engagement.
-                  </p>
-                </div>
+                
               </div>
             ))}
 

@@ -4,7 +4,7 @@ export default function ScrollStoppingSection() {
   return (
     <section className="relative w-full bg-[#B7E28D] overflow-hidden py-24 md:py-32">
 
-      {/* Heading Above Section */}
+      
       <div className="bg-[#eeeeee] pb-16 md:pb-20">
         <h2 className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-black pt-20">
           Scroll-stopping copy
@@ -13,13 +13,13 @@ export default function ScrollStoppingSection() {
 
       
 
-      {/* Star Burst Top Right */}
+     
       <div className="absolute top-0 right-0 w-40 md:w-64 h-40 md:h-64 bg-black clip-star z-10" />
 
-      {/* Pink Blob Bottom Left */}
+      
       <div className="absolute bottom-0 left-0 w-48 md:w-72 h-48 md:h-72 bg-pink-500 rounded-tr-[140px] z-10" />
 
-      {/* Squiggly Lines */}
+     
       <svg
         className="absolute inset-0 w-full h-full pointer-events-none z-0"
         viewBox="0 0 1440 800"
@@ -50,10 +50,10 @@ export default function ScrollStoppingSection() {
     />
   </div>
 </div>
-      {/* Bottom spacing so blob doesn't cut phones */}
+     
       <div className="h-20 md:h-32" />
 
-      {/* Star Shape Clip Path */}
+      
       <style jsx>{`
         .clip-star {
           clip-path: polygon(

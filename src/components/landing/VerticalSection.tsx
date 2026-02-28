@@ -3,6 +3,7 @@
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 import { motion } from "framer-motion";
+import { Users, BookOpen, BarChart3, Shield, TrendingUp, FileText, Video, Crown, Megaphone, Calendar, UserCheck, Lock } from "lucide-react";
 
 export default function CapabilitiesSection() {
   const data = [
@@ -20,19 +21,19 @@ export default function CapabilitiesSection() {
 
           <div className="mt-8 space-y-3">
             <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
-              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Public affairs</span> and institutional communication strategy
+              <Users className="text-[#ff5a1f] w-5 h-5" /> <span className="text-[#111111] font-medium">Public affairs</span> and institutional communication strategy
             </p>
             <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
-              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Narrative</span> and reputation frameworks
+              <BookOpen className="text-[#ff5a1f] w-5 h-5" /> <span className="text-[#111111] font-medium">Narrative</span> and reputation frameworks
             </p>
             <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
-              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Stakeholder</span> and public perception analysis
+              <BarChart3 className="text-[#ff5a1f] w-5 h-5" /> <span className="text-[#111111] font-medium">Stakeholder</span> and public perception analysis
             </p>
             <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
-              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Leadership</span> and crisis communication guidance
+              <Shield className="text-[#ff5a1f] w-5 h-5" /> <span className="text-[#111111] font-medium">Leadership</span> and crisis communication guidance
             </p>
             <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
-              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Long-term</span> trust and positioning strategy
+              <TrendingUp className="text-[#ff5a1f] w-5 h-5" /> <span className="text-[#111111] font-medium">Long-term</span> trust and positioning strategy
             </p>
           </div>
 
@@ -70,16 +71,16 @@ export default function CapabilitiesSection() {
 
           <div className="mt-6 space-y-2 text-sm">
             <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
-              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Narrative-led</span> content systems
+              <FileText className="text-[#ff5a1f] w-5 h-5" /> <span className="text-[#111111] font-medium">Narrative-led</span> content systems
             </p>
             <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
-              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Audio-visual</span> storytelling
+              <Video className="text-[#ff5a1f] w-5 h-5" /> <span className="text-[#111111] font-medium">Audio-visual</span> storytelling
             </p>
             <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
-              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Leadership</span> and institutional storytelling
+              <Crown className="text-[#ff5a1f] w-5 h-5" /> <span className="text-[#111111] font-medium">Leadership</span> and institutional storytelling
             </p>
             <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
-              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Issue-based</span> and campaign communication
+              <Megaphone className="text-[#ff5a1f] w-5 h-5" /> <span className="text-[#111111] font-medium">Issue-based</span> and campaign communication
             </p>
           </div>
 
@@ -116,13 +117,13 @@ export default function CapabilitiesSection() {
 
           <div className="mt-6 space-y-2 text-sm">
             <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
-              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Strategic</span> media planning
+              <Calendar className="text-[#ff5a1f] w-5 h-5" /> <span className="text-[#111111] font-medium">Strategic</span> media planning
             </p>
             <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
-              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Selective</span> influencer engagement
+              <UserCheck className="text-[#ff5a1f] w-5 h-5" /> <span className="text-[#111111] font-medium">Selective</span> influencer engagement
             </p>
             <p className="text-[#444444] hover:text-[#ff5a1f] transition-colors duration-300 flex items-center gap-2">
-              <span className="text-[#ff5a1f] text-lg">✓</span> <span className="text-[#111111] font-medium">Message</span> protection and rollout discipline
+              <Lock className="text-[#ff5a1f] w-5 h-5" /> <span className="text-[#111111] font-medium">Message</span> protection and rollout discipline
             </p>
           </div>
 

@@ -3,12 +3,12 @@
 import { motion } from "motion/react";
 
 const videos = [
-  "https://play.gumlet.io/embed/6904627fa73e176902710649",
-  "https://play.gumlet.io/embed/6904627fa5b40b283e125f54",
-  "https://play.gumlet.io/embed/6904627faa9e79860d5356fa",
-  "https://play.gumlet.io/embed/689b34a30e12b7df523072f5",
-  "https://play.gumlet.io/embed/680102a2fc3cb0b3238a7593",
-  "https://play.gumlet.io/embed/6904627fa73e176902710649",
+  "https://play.gumlet.io/embed/6985d218742559dc5a11a435",
+  "https://play.gumlet.io/embed/6985d2184db88a967f203e86",
+  "https://play.gumlet.io/embed/6985d218742559dc5a11a433",
+  "https://play.gumlet.io/embed/6985d218742559dc5a11a437",
+  "https://play.gumlet.io/embed/6985d218742559dc5a11a42d",
+  "https://play.gumlet.io/embed/6985cd64742559dc5a10fcf1",
 ];
 
 export default function VibeSection() {
