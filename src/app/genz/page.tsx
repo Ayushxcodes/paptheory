@@ -6,6 +6,8 @@ import FlowSection from '@/components/Genz/FlowSection'
 import ProminentSection from '@/components/Genz/ProminentSection'
 import MobSection from '@/components/Genz/MobSection'
 import BankingHero from '@/components/Genz/BankingHero'
+import MahindraSection from '@/components/Genz/MahindraSection'
+import ICICISection from '@/components/Genz/ICICISection'
 
 const GenZpage = () => {
   return (
@@ -16,6 +18,8 @@ const GenZpage = () => {
       <ProminentSection />
       <MobSection />
       <BankingHero />
+      <MahindraSection />
+      <ICICISection />
     </div>
   )
 }
