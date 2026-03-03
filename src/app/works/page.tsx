@@ -28,7 +28,7 @@ const WorksPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
 
       {/* Header */}
       <div className="pt-32 pb-16 px-6 lg:px-8">
@@ -82,23 +82,7 @@ const WorksPage = () => {
       </div>
 
       {/* CTA */}
-      <div className="bg-gray-900 py-16 px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
-            Ready to <span className="text-[#ff5a1f]">Collaborate</span>?
-          </h2>
-
-          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help tell your story and achieve your
-            communication goals.
-          </p>
-
-          <button className="bg-[#ff5a1f] text-white px-8 py-3 rounded-lg hover:bg-[#e54d1f] transition-colors duration-300 font-medium border-2 border-[#ff5a1f] hover:border-[#e54d1f]">
-            Start a Conversation
-          </button>
-        </div>
-      </div>
-
+      
     </div>
   )
 }

@@ -16,7 +16,7 @@ const TickerSection = () => {
   ]
 
   return (
-    <section className="py-16 bg-white overflow-hidden">
+    <section className="py-16  overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">

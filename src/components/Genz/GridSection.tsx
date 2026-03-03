@@ -13,7 +13,7 @@ const videos = [
 
 export default function VibeSection() {
   return (
-    <section className="relative overflow-hidden bg-white py-28 px-6">
+    <section className="relative overflow-hidden py-28 px-6">
 
       {/* 🌈 Radial Background */}
       {/* Removed for white background consistency */}

@@ -143,11 +143,9 @@ export default function CapabilitiesSection() {
   ];
 
   return (
-    <section className="relative pt-16 pb-12 md:pt-24 md:pb-16 bg-gradient-to-br from-white via-gray-50 to-orange-50 overflow-hidden">
+    <section className="relative pt-16 pb-12 md:pt-24 md:pb-16  overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,90,31,0.05),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(17,17,17,0.05),transparent_50%)]" />
-
+     
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         
         {/* Section Intro */}

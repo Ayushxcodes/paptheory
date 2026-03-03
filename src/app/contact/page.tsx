@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen ">
       {/* Header Section */}
       <div className="pt-32 pb-16 px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
