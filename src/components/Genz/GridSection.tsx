@@ -26,12 +26,12 @@ export default function VibeSection() {
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl font-black leading-[0.95] text-black"
+          className="text-4xl md:text-7xl font-black leading-[0.95] text-black"
         >
-          Discover Your
+          Content Creator Space
           <br />
           <span className="text-yellow-500 drop-shadow-[4px_4px_0px_black]">
-            Financial Vibe
+            Reel-Scroller Space
           </span>
         </motion.h2>
 
@@ -41,7 +41,7 @@ export default function VibeSection() {
           transition={{ delay: 0.2 }}
           className="mt-6 text-lg md:text-xl text-black/70 max-w-2xl mx-auto"
         >
-          Smart moves. Real growth. Zero market noise.
+          We collaborate with the best for your brand to stand out .
         </motion.p>
 
         {/* ================= VIDEO GRID ================= */}
