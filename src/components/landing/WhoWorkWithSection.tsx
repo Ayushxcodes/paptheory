@@ -1,6 +1,7 @@
 import ReflectiveCard from '@/components/ReflectiveCard';
 import ExploreWorkBar from '@/components/ExploreWorkBar';
 import { motion } from 'framer-motion';
+import { Landmark, Crown, Building, PiggyBankIcon } from 'lucide-react';
 
 export default function WhoWeWorkWith() {
   return (
@@ -95,7 +96,7 @@ export default function WhoWeWorkWith() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="flex items-start gap-4 justify-center lg:justify-start group"
               >
-                <span className="mt-2 w-3 h-3 bg-[#ff5a1f] rounded-full flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
+                <Landmark className="mt-1 w-5 h-5 text-[#ff5a1f] flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
                 <p className="text-[15px] sm:text-[16px] text-[#111111] group-hover:text-[#ff5a1f] transition-colors duration-300">
                   Governments and public institutions
                 </p>
@@ -107,7 +108,7 @@ export default function WhoWeWorkWith() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="flex items-start gap-4 justify-center lg:justify-start group"
               >
-                <span className="mt-2 w-3 h-3 bg-[#ff5a1f] rounded-full flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
+                <Crown className="mt-1 w-5 h-5 text-[#ff5a1f] flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
                 <p className="text-[15px] sm:text-[16px] text-[#111111] group-hover:text-[#ff5a1f] transition-colors duration-300">
                   Political leadership and senior advisors
                 </p>
@@ -119,7 +120,7 @@ export default function WhoWeWorkWith() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="flex items-start gap-4 justify-center lg:justify-start group"
               >
-                <span className="mt-2 w-3 h-3 bg-[#ff5a1f] rounded-full flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
+                <Building className="mt-1 w-5 h-5 text-[#ff5a1f] flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
                 <p className="text-[15px] sm:text-[16px] text-[#111111] group-hover:text-[#ff5a1f] transition-colors duration-300">
                   Corporations operating under public and regulatory scrutiny
                 </p>
@@ -131,7 +132,7 @@ export default function WhoWeWorkWith() {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="flex items-start gap-4 justify-center lg:justify-start group"
               >
-                <span className="mt-2 w-3 h-3 bg-[#ff5a1f] rounded-full flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
+                <PiggyBankIcon className="mt-1 w-5 h-5 text-[#ff5a1f] flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
                 <p className="text-[15px] sm:text-[16px] text-[#111111] group-hover:text-[#ff5a1f] transition-colors duration-300">
                   Financial, infrastructure, healthcare, education, and legacy institutions
                 </p>
