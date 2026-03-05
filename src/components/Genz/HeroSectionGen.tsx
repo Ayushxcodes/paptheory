@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "motion/react";
+import { useRouter } from "next/navigation";
 
 export default function DesignSummitHero() {
+  const router = useRouter();
+
   return (
     <section className="relative  overflow-hidden py-20 md:py-28">
       <motion.div 
@@ -59,6 +62,7 @@ export default function DesignSummitHero() {
               whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(59, 130, 246, 0.3)" }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300 }}
+              onClick={() => router.push('/contact')}
             >
               Make Me Viral
             </motion.button>
@@ -68,6 +72,7 @@ export default function DesignSummitHero() {
               whileHover={{ scale: 1.05, backgroundColor: "rgba(59, 130, 246, 0.1)" }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300 }}
+              onClick={() => router.push('/contact')}
             >
               Let’s Build Culture
             </motion.button>
@@ -123,9 +128,9 @@ export default function DesignSummitHero() {
             whileHover={{ scale: 1.1, rotate: -5 }}
           >
             <img
-              src="/image2.jpg"
+              src="/mahindra.png"
               alt="Speaker"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </motion.div>
 
@@ -138,7 +143,7 @@ export default function DesignSummitHero() {
             whileHover={{ scale: 1.1, rotate: 5 }}
           >
             <img
-              src="/image3.jpeg"
+              src="/suzuki.webp"
               alt="Speaker"
               className="w-full h-full object-cover"
             />

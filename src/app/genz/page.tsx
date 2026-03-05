@@ -13,13 +13,16 @@ const GenZpage = () => {
   return (
     <div>
       <GenZHero />
-      <GenZSection />
-      <FlowSection />
-      <ProminentSection />
       <MobSection />
       <BankingHero />
       <MahindraSection />
       <ICICISection />
+      <GenZSection />
+      <FlowSection />
+      <ProminentSection />
+      
+      
+      
     </div>
   )
 }
