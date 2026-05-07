@@ -30,19 +30,10 @@ export default function OurApproach() {
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-[18px] sm:text-[20px] leading-[30px] sm:leading-[34px] text-[#111111] font-medium"
-              >
-                We believe communication is not about volume or virality.
-              </motion.p>
-
-              <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-[18px] sm:text-[20px] leading-[30px] sm:leading-[34px] text-[#ff5a1f] font-semibold"
+                className="text-[18px] sm:text-[30px] leading-[30px] sm:leading-[34px] text-orange-400 font-semibold"
               >
-                It is about trust, coherence, and restraint.
+                Where idea become Influence
               </motion.p>
             </div>
 
@@ -61,13 +52,13 @@ export default function OurApproach() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="mt-12 sm:mt-16 p-6 bg-gradient-to-r from-orange-50 to-orange-100 border-l-4 border-[#ff5a1f] rounded-r-lg"
+              className="mt-12 sm:mt-16 p-6 bg-gradient-to-r from-orange-50 to-orange-100 border-l-4 border-orange-400 rounded-r-lg"
             >
               <p className="text-[22px] sm:text-[28px] lg:text-[32px] font-bold text-[#111111]">
-                We do not react.
+                It is about Trust,
               </p>
-              <p className="text-[22px] sm:text-[28px] lg:text-[32px] font-bold text-[#ff5a1f] mt-2">
-                We frame.
+              <p className="text-[22px] sm:text-[28px] lg:text-[32px] font-bold text-orange-400 mt-2">
+                 Coherence, and Restraint
               </p>
             </motion.div>
           </motion.div>

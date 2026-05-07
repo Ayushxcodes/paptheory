@@ -30,7 +30,7 @@ export default function SelectedWorkSection() {
 
         {/* Section Header */}
         <div className="max-w-3xl">
-          <p className="text-sm uppercase tracking-wide text-[#ff5a1f] font-medium">
+          <p className="text-sm uppercase tracking-wide text-[#f99216] font-medium">
             Selected Work
           </p>
 
@@ -45,7 +45,7 @@ export default function SelectedWorkSection() {
             not a catalogue of outputs.
           </p>
 
-          <div className="mt-10 h-px w-full bg-[#ff5a1f]/30" />
+          <div className="mt-10 h-px w-full bg-[#f99216]/30" />
         </div>
 
         {/* Infinite Video Loop */}
@@ -95,7 +95,7 @@ export default function SelectedWorkSection() {
       </div>
 
       {/* Bottom CTA Bar */}
-      <div className="absolute bottom-0 left-0 w-full h-7 bg-[#ff5a1f] flex items-center justify-center">
+      <div className="absolute bottom-0 left-0 w-full h-7 bg-[#f99216] flex items-center justify-center">
         <Link
           href="/works"
           className="text-white text-sm hover:opacity-80 transition"

@@ -23,12 +23,12 @@ export default function Hero() {
               tracking-[-0.5px] 
               lg:tracking-[-1px]
             ">
-              Strategic Communication for 
+              Creativity,
               <br />
-              Institutions, Influence,{" "}
-              <span className="text-[#ff5a1f] relative inline-block">
-                and Public Trust
-                <span className="absolute -top-2 -right-3 w-2 h-2 bg-[#ff5a1f]" />
+              Media Intelligence,{" "}
+              <span className="text-[#f99216] relative inline-block">
+                and Cultural Insight
+                <span className="absolute -top-2 -right-3 w-2 h-2 bg-[#f99216]" />
               </span>
             </h3>
 
@@ -45,27 +45,27 @@ export default function Hero() {
             </p>
 
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
-              <Link href="/genz" className="bg-[#ff5a1f] text-white px-8 py-4 rounded-md text-[16px] font-semibold hover:opacity-90 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out transform w-full sm:w-auto">
+              <Link href="/genz" className="bg-[#f99216] text-white px-8 py-4 rounded-md text-[16px] font-semibold hover:opacity-90 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out transform w-full sm:w-auto">
                 Book a demo →
               </Link>
 
-              <Link href="/genz" className="flex items-center justify-center sm:justify-start gap-3 text-[#111111] font-medium text-[16px] hover:text-[#ff5a1f] transition-colors duration-300 group">
+              <Link href="/genz" className="flex items-center justify-center sm:justify-start gap-3 text-[#111111] font-medium text-[16px] hover:text-[#f99216] transition-colors duration-300 group">
                 Book a call
-                <span className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm group-hover:bg-[#ff5a1f] group-hover:translate-x-1 transition-all duration-300 ease-in-out">
+                <span className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm group-hover:bg-[#f99216] group-hover:translate-x-1 transition-all duration-300 ease-in-out">
                   →
                 </span>
               </Link>
             </div>
 
             <div className="mt-12 sm:mt-14">
-              <p className="text-[14px] text-[#6b6b6b] mb-6">
+              <p className="text-[18px] sm:text-[22px] text-[#6b6b6b] mb-6 font-semibold">
                 Our Values
               </p>
 
               <div className="flex flex-wrap items-center gap-6 sm:gap-10 opacity-70">
-                <span className="text-[13px] font-semibold">Strategy-led</span>
-                <span className="text-[13px] font-semibold">Ethics-driven</span>
-                <span className="text-[13px] font-semibold">
+                <span className="text-[18px] sm:text-[22px] font-bold">Strategy-led</span>
+                <span className="text-[18px] sm:text-[22px] font-bold">Ethics-driven</span>
+                <span className="text-[18px] sm:text-[22px] font-bold">
                   Built for long-term credibility
                 </span>
               </div>

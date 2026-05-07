@@ -16,28 +16,18 @@ export default function Navbar() {
           <Image
             src="/web_logo.png"
             alt="Paper Theory Logo"
-            width={320}
+            width={280}
             height={60}
-            className="h-18 md:h-20 w-auto"
+            className="h-17 md:h-20 w-auto"
           />
         </a>
 
         {/* Desktop Nav links shifted to right */}
         <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-700 relative">
-          <NavItem
-            label="Platform"
-            items={["Homepage", "Our Works", "Teams"]}
-          />
-          <NavItem
-            label="Our Approach"
-            items={["Solutions", "Resources", "Customers"]}
-          />
-          <a href="/genz" className="hover:text-neutral-900 transition">
-            GenZ
-          </a>
-          <a href="/contact" className="hover:text-neutral-900 transition">
-            Contact Us
-          </a>
+          <a href="/" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Homepage</a>
+          <a href="/works" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">OurWork</a>
+          <a href="/genz" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Social corner</a>
+          <a href="/contact" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Contact Us</a>
         </nav>
 
         {/* Mobile menu button */}
@@ -53,20 +43,10 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-neutral-200">
           <div className="px-6 py-4 space-y-4">
-            <MobileNavItem
-              label="Platform"
-              items={["Homepage", "Our Works", "Teams"]}
-            />
-            <MobileNavItem
-              label="Our Approach"
-              items={["Solutions", "Resources", "Customers"]}
-            />
-            <a href="/genz" className="block py-2 text-sm text-neutral-700 hover:text-neutral-900">
-              GenZ
-            </a>
-            <a href="/contact" className="block py-2 text-sm text-neutral-700 hover:text-neutral-900">
-              Contact Us
-            </a>
+            <a href="/" className="block py-2 text-sm text-neutral-700 transition-colors duration-200 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Homepage</a>
+            <a href="/works" className="block py-2 text-sm text-neutral-700 transition-colors duration-200 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">OurWork</a>
+            <a href="/genz" className="block py-2 text-sm text-neutral-700 transition-colors duration-200 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Social corner</a>
+            <a href="/contact" className="block py-2 text-sm text-neutral-700 transition-colors duration-200 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Contact Us</a>
           </div>
         </div>
       )}

@@ -64,7 +64,7 @@ export default function CulturePyramid() {
         <motion.div
           animate={{ y: [0, -8, 0] }}
           transition={{ duration: 6, repeat: Infinity }}
-          className="hidden md:block absolute left-4 md:left-10 top-1/3 text-xl md:text-3xl font-bold text-black max-w-xs"
+          className="hidden md:block absolute left-4 md:left-10 top-1/3 text-xl md:text-3xl font-bold text-orange-400 max-w-xs"
         >
           We turn ideas into culture — not ads.
         </motion.div>
@@ -72,7 +72,7 @@ export default function CulturePyramid() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 7, repeat: Infinity }}
-          className="hidden md:block absolute right-4 md:right-10 top-1/2 text-xl md:text-3xl font-bold text-black max-w-xs text-right"
+          className="hidden md:block absolute right-4 md:right-10 top-1/2 text-xl md:text-3xl font-bold text-orange-500 max-w-xs text-right"
         >
           We make your brand talkable in 10 seconds or less.
         </motion.div>
@@ -80,7 +80,7 @@ export default function CulturePyramid() {
         <motion.div
           animate={{ y: [0, -12, 0] }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="hidden md:block absolute left-1/2 -translate-x-1/2 bottom-8 md:bottom-16 text-xl md:text-3xl font-bold text-black text-center"
+          className="hidden md:block absolute left-1/2 -translate-x-1/2 bottom-8 md:bottom-16 text-xl md:text-3xl font-bold text-orange-600 text-center"
         >
           We don’t chase trends — we create them.
         </motion.div>

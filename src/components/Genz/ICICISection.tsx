@@ -58,7 +58,7 @@ export default function ICICISection() {
             </div>
             <p className="text-lg md:text-xl mb-6 font-medium leading-relaxed">
               Organic shareability baked in
-              <span className="block text-[#0F4C81] font-semibold">Simple, fast, and fun.</span>
+              <span className="block text-[#0F4C81] font-semibold text-2xl md:text-3xl">Simple, fast, and fun.</span>
             </p>
 
             <div className="flex gap-4 flex-wrap justify-start">
@@ -77,7 +77,7 @@ export default function ICICISection() {
           </div>
           <p className="text-base sm:text-lg font-medium text-gray-800 max-w-md mx-auto px-4 leading-relaxed">
             Organic shareability baked in
-            <span className="block text-[#0F4C81] font-semibold mt-1">Simple, fast, and fun.</span>
+            <span className="block text-[#0F4C81] font-semibold mt-1 text-xl sm:text-2xl">Simple, fast, and fun.</span>
           </p>
 
           <div className="flex gap-3 flex-wrap justify-center mt-6 px-4">

@@ -79,7 +79,7 @@ export default function PhilosophySection() {
         <motion.div
           animate={{ rotate: -360 }}
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute bottom-20 right-10 w-24 h-24 border border-orange-500/20 rounded-full"
+          className="absolute bottom-20 right-10 w-24 h-24 border border-orange-400/20 rounded-full"
         />
       </div>
     </section>

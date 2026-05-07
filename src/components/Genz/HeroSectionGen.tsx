@@ -35,7 +35,7 @@ export default function DesignSummitHero() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Good brands are remembered
+              We Engineer perception in
             </motion.span>
             <br />
             <motion.span 
@@ -44,7 +44,7 @@ export default function DesignSummitHero() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-               Great brands are felt
+                the age of visibility
             </motion.span>
           </motion.h1>
 

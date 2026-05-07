@@ -96,8 +96,8 @@ export default function WhoWeWorkWith() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="flex items-start gap-4 justify-center lg:justify-start group"
               >
-                <Landmark className="mt-1 w-5 h-5 text-[#ff5a1f] flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
-                <p className="text-[15px] sm:text-[16px] text-[#111111] group-hover:text-[#ff5a1f] transition-colors duration-300">
+                <Landmark className="mt-1 w-5 h-5 text-[#f99216] flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
+                <p className="text-[15px] sm:text-[16px] text-[#111111] group-hover:text-[#f99216] transition-colors duration-300">
                   Governments and public institutions
                 </p>
               </motion.div>
@@ -108,8 +108,8 @@ export default function WhoWeWorkWith() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="flex items-start gap-4 justify-center lg:justify-start group"
               >
-                <Crown className="mt-1 w-5 h-5 text-[#ff5a1f] flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
-                <p className="text-[15px] sm:text-[16px] text-[#111111] group-hover:text-[#ff5a1f] transition-colors duration-300">
+                <Crown className="mt-1 w-5 h-5 text-[#f99216] flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
+                <p className="text-[15px] sm:text-[16px] text-[#111111] group-hover:text-[#f99216] transition-colors duration-300">
                   Political leadership and senior advisors
                 </p>
               </motion.div>
@@ -120,8 +120,8 @@ export default function WhoWeWorkWith() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="flex items-start gap-4 justify-center lg:justify-start group"
               >
-                <Building className="mt-1 w-5 h-5 text-[#ff5a1f] flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
-                <p className="text-[15px] sm:text-[16px] text-[#111111] group-hover:text-[#ff5a1f] transition-colors duration-300">
+                <Building className="mt-1 w-5 h-5 text-[#f99216] flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
+                <p className="text-[15px] sm:text-[16px] text-[#111111] group-hover:text-[#f99216] transition-colors duration-300">
                   Corporations operating under public and regulatory scrutiny
                 </p>
               </motion.div>
@@ -132,8 +132,8 @@ export default function WhoWeWorkWith() {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="flex items-start gap-4 justify-center lg:justify-start group"
               >
-                <PiggyBankIcon className="mt-1 w-5 h-5 text-[#ff5a1f] flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
-                <p className="text-[15px] sm:text-[16px] text-[#111111] group-hover:text-[#ff5a1f] transition-colors duration-300">
+                <PiggyBankIcon className="mt-1 w-5 h-5 text-[#f99216] flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
+                <p className="text-[15px] sm:text-[16px] text-[#111111] group-hover:text-[#f99216] transition-colors duration-300">
                   Financial, infrastructure, healthcare, education, and legacy institutions
                 </p>
               </motion.div>

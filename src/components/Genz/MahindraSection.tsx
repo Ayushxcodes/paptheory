@@ -19,11 +19,9 @@ export default function GenZPaymentsSection() {
         <div className="relative overflow-hidden grid grid-cols-1 md:grid-cols-2 h-[280px] sm:h-[320px] md:h-[420px] pt-10">
 
          
-
-          {/* Right Video Side */}
-          <div className="relative flex items-center justify-center overflow-hidden">
-            {/* Video Container - Full Coverage */}
-            <div className="relative w-full h-full">
+          {/* Centered Video Block */}
+          <div className="relative flex items-center justify-center overflow-hidden col-span-1 md:col-span-2">
+            <div className="relative w-full h-full max-w-2xl mx-auto">
               <iframe
                 loading="lazy"
                 title="Mahindra Video"
@@ -34,51 +32,10 @@ export default function GenZPaymentsSection() {
             </div>
           </div>
 
-          {/* Desktop Text Block - Right Side */}
-          <div className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 z-10 flex-col items-end text-right text-black max-w-md">
-            <p className="text-lg md:text-xl mb-6 font-medium">
-              Join the fastest growing financial platform.
-              Faster payments processor and new benefits.
-            </p>
-
-            <div className="flex gap-4 flex-wrap justify-end">
-              <Link href="/contact">
-                <button className="bg-lime-400 hover:bg-lime-300 transition px-6 py-3 rounded-xl font-medium flex items-center gap-2 text-black">
-                  Contact us →
-                </button>
-              </Link>
-
-              <Link href="/works">
-                <button className="bg-white text-black hover:bg-gray-100 transition px-6 py-3 rounded-xl font-medium">
-                  How it works
-                </button>
-              </Link>
-            </div>
-          </div>
-
         </div>
 
         {/* Mobile Text Block - Below Video */}
-        <div className="md:hidden mt-8 text-center">
-          <p className="text-base sm:text-lg font-medium text-black max-w-md mx-auto px-4">
-            Join the fastest growing financial platform.
-            Faster payments processor and new benefits.
-          </p>
-
-          <div className="flex gap-3 flex-wrap justify-center mt-4 px-4">
-            <Link href="/contact">
-              <button className="bg-lime-400 hover:bg-lime-300 transition px-4 py-2 rounded-xl font-medium flex items-center gap-2 text-black text-sm">
-                Contact us →
-              </button>
-            </Link>
-
-            <Link href="/works">
-              <button className="bg-white text-black hover:bg-gray-100 transition px-4 py-2 rounded-xl font-medium text-sm">
-                How it works
-              </button>
-            </Link>
-          </div>
-        </div>
+        
 
         {/* Divider */}
         

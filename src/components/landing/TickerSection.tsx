@@ -21,7 +21,7 @@ const TickerSection = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
-            Trusted by <span className="text-[#ff5a1f]">Leading Brands</span>
+            Trusted by <span className="text-[#f99216]">Leading Brands</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             We're proud to work with industry leaders and innovative companies worldwide.

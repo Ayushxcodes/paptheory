@@ -34,18 +34,18 @@ const WorksPage = () => {
       <div className="pt-32 pb-16 px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black mb-6">
-            Our <span className="text-[#ff5a1f]">Works</span>
+            Our <span className="text-[#f99216]">Works</span>
           </h1>
 
           <p className="text-lg md:text-xl text-black max-w-2xl mx-auto leading-relaxed">
             Explore our portfolio of{" "}
-            <span className="text-[#ff5a1f] font-medium">
+            <span className="text-[#f99216] font-medium">
               strategic communications
             </span>{" "}
             and creative campaigns that drive real impact.
           </p>
 
-          <div className="mt-10 h-px w-full bg-[#ff5a1f]/30 max-w-md mx-auto" />
+          <div className="mt-10 h-px w-full bg-[#f99216]/30 max-w-md mx-auto" />
         </div>
       </div>
 
@@ -59,7 +59,7 @@ const WorksPage = () => {
             {videoIds.map((id, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-xl overflow-hidden shadow-lg border border-black hover:border-[#ff5a1f]/60 transition-all duration-300 hover:shadow-2xl hover:shadow-[#ff5a1f]/20"
+                className="group bg-white rounded-xl overflow-hidden shadow-lg border border-black hover:border-[#f99216]/60 transition-all duration-300 hover:shadow-2xl hover:shadow-[#f99216]/20"
               >
                 {/* 16:9 ratio */}
                 <div className="relative aspect-video">
