@@ -1,13 +1,12 @@
 "use client"
 
-import ControlledMediaSection from '@/components/landing/ControlledMediaSection'
-import HeroSection from '@/components/landing/HeroSection'
-import OurApproachSection from '@/components/landing/OurApproachSection'
-import PhilosophySection from '@/components/landing/PhilosophySection'
-import SelectedWorkSection from '@/components/landing/SelectedWorkSection'
-import TickerSection from '@/components/landing/TickerSection'
-import VerticalsSection from '@/components/landing/VerticalSection'
-import WhoYouWorkWithSection from '@/components/landing/WhoWorkWithSection'
+
+import ClientsSection from '@/components/Landing/ClientsSection'
+import CtaSection from '@/components/Landing/CtaSection'
+import HeroSection from '@/components/Landing/HeroSection'
+import ItservicesSection from '@/components/Landing/ItservicesSection'
+import LinesofBusinessSection from '@/components/Landing/LinesofBusinessSection'
+import SelectedWorkSection from '@/components/Landing/SelectedWorkSection'
 import { AnimatePresence, motion } from 'motion/react'
 import React, { useState } from 'react'
 
@@ -56,12 +55,12 @@ const Homepage = () => {
           transition={{ duration: 0.5 }}
         >
           <HeroSection />
-          <WhoYouWorkWithSection />
-          <OurApproachSection />
-          <VerticalsSection />
-          <TickerSection />
+          <LinesofBusinessSection />
+          <ItservicesSection />
           <SelectedWorkSection />
-          <PhilosophySection />
+          <ClientsSection />
+          <CtaSection />
+          
         </motion.div>
       )}
     </AnimatePresence>

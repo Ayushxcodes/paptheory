@@ -23,11 +23,11 @@ export default function Hero() {
               tracking-[-0.5px] 
               lg:tracking-[-1px]
             ">
-              Creativity,
+              Where
               <br />
-              Media Intelligence,{" "}
+              Technology Meets,
               <span className="text-[#f99216] relative inline-block">
-                and Cultural Insight
+                Communication
                 <span className="absolute -top-2 -right-3 w-2 h-2 bg-[#f99216]" />
               </span>
             </h3>
@@ -41,16 +41,16 @@ export default function Hero() {
               text-[#6b6b6b] 
               max-w-[520px]
             ">
-              We work with governments, political stakeholders, large institutions, and private sector brands to shape narrative, manage reputation, and communicate responsibly in the public domain.
+              Paper Theory Networks delivers enterprise IT solutions and strategic communications that move businesses forward. From SAP transformations to brand campaigns — we build what matters.Explore IT services
             </p>
 
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
               <Link href="/genz" className="bg-[#f99216] text-white px-8 py-4 rounded-md text-[16px] font-semibold hover:opacity-90 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out transform w-full sm:w-auto">
-                Book a demo →
+                Explore our Services →
               </Link>
 
               <Link href="/genz" className="flex items-center justify-center sm:justify-start gap-3 text-[#111111] font-medium text-[16px] hover:text-[#f99216] transition-colors duration-300 group">
-                Book a call
+                View our Work
                 <span className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm group-hover:bg-[#f99216] group-hover:translate-x-1 transition-all duration-300 ease-in-out">
                   →
                 </span>
