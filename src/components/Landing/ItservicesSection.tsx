@@ -50,50 +50,65 @@ export default function ItservicesSection() {
   ];
 
   return (
-    <section id="services" className="relative py-20 md:py-28">
+    <section id="services" className="relative py-20 md:py-32 ">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <p className="text-sm uppercase tracking-wide text-[#f99216] font-medium">IT services</p>
+        {/* Section Header */}
+        <div className="max-w-3xl mb-16">
+          <p className="text-sm uppercase tracking-widest text-[#f99216] font-semibold">IT services</p>
 
-          <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-[#111111]">
+          <h2 className="mt-6 text-4xl md:text-5xl font-bold tracking-tight text-[#111111]">
             End-to-end technology solutions
           </h2>
 
-          <p className="mt-4 text-base text-[#555555] leading-relaxed">
+          <p className="mt-4 text-lg text-[#555555] leading-relaxed">
             Built for businesses that want real outcomes, not just software. We
             cover the full stack — from architecture to delivery.
           </p>
+
+          <div className="mt-6 h-1 w-20 bg-gradient-to-r from-[#f99216] to-[#f99216]/30 rounded-full" />
         </div>
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {services.map((s) => (
             <div
               key={s.title}
-              className="svc-card bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
+              className="svc-card group relative overflow-hidden bg-white border border-gray-200 rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-500 hover:border-[#f99216]/30"
             >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-md bg-[#f3f7ff] text-[#1b4fd8] flex items-center justify-center text-lg">
-                  {s.icon}
+              {/* Background Accent */}
+              <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-[#f99216]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              <div className="relative flex flex-col h-full">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#fff7ed] to-[#ffe6d5] text-[#f99216] flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    {s.icon}
+                  </div>
                 </div>
 
-                <div>
-                  <h4 className="text-lg font-semibold text-[#111111]">{s.title}</h4>
-                  <p className="mt-2 text-sm text-[#6b6b6b]">{s.description}</p>
-                </div>
+                <h4 className="text-lg font-bold text-[#111111] mb-3 group-hover:text-[#f99216] transition-colors duration-300">
+                  {s.title}
+                </h4>
+
+                <p className="text-sm text-[#6b6b6b] leading-relaxed flex-grow">
+                  {s.description}
+                </p>
+
+                {/* Hover indicator */}
+                <div className="mt-4 h-0.5 w-0 bg-gradient-to-r from-[#f99216] to-transparent group-hover:w-8 transition-all duration-500 rounded-full" />
               </div>
             </div>
           ))}
         </div>
 
         {/* Industries we serve */}
-        <div className="mt-30">
-          <p className="text-sm uppercase tracking-wide text-[#f99216] font-medium">Industries we serve</p>
+        <div className="mt-20 pt-12 border-t border-gray-200">
+          <p className="text-sm uppercase tracking-widest text-[#f99216] font-semibold mb-6">Industries we serve</p>
 
-          <div className="mt-4 flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3">
             {industries.map((ind) => (
               <div
                 key={ind}
-                className="ind-pill inline-flex items-center gap-2 bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm"
+                className="ind-pill group inline-flex items-center gap-2 bg-gradient-to-br from-gray-50 to-gray-100 text-gray-800 px-5 py-2.5 rounded-full text-sm font-medium border border-gray-200 hover:border-[#f99216]/40 hover:bg-[#fff7ed] transition-all duration-300 hover:text-[#f99216] cursor-pointer"
               >
                 {ind}
               </div>

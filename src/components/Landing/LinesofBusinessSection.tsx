@@ -23,60 +23,82 @@ export default function LinesofBusinessSection() {
   ];
 
   return (
-    <section id="lob" className="relative py-20 md:py-28">
+    <section id="lob" className="relative py-20 md:py-32">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <p className="text-sm uppercase tracking-wide text-[#f99216] font-medium">
+        {/* Section Header */}
+        <div className="max-w-3xl mb-12">
+          <p className="text-sm uppercase tracking-widest text-[#f99216] font-semibold">
             Lines of business
           </p>
 
-          <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-[#111111]">
+          <h2 className="mt-6 text-4xl md:text-5xl font-bold tracking-tight text-[#111111]">
             Lines of business
           </h2>
 
-          <p className="mt-4 text-base text-[#555555] leading-relaxed">
+          <p className="mt-4 text-lg text-[#555555] leading-relaxed">
             We bring together technical delivery and cultural communications to
             build products, platforms and stories that move organizations.
           </p>
+
+          <div className="mt-6 h-1 w-20 bg-gradient-to-r from-[#f99216] to-[#f99216]/30 rounded-full" />
         </div>
 
-        <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {items.map((it) => (
             <div
               key={it.title}
-              className={`lob-card p-6 rounded-xl border border-gray-100 shadow-sm ${
-                it.featured ? 'bg-white' : 'bg-white'
+              className={`lob-card group relative overflow-hidden rounded-2xl transition-all duration-500 ${
+                it.featured
+                  ? 'lg:col-span-1 bg-gradient-to-br from-[#f99216]/10 to-transparent border-2 border-[#f99216]/30 shadow-xl hover:shadow-2xl hover:border-[#f99216]/60'
+                  : 'bg-white border border-[#b85a00]/20 shadow-md hover:shadow-xl hover:border-[#b85a00]/40'
               }`}
             >
-              <div className="flex items-start gap-4">
-                <div className={`flex items-center justify-center w-12 h-12 rounded-md ${it.color}`}>
-                  <span className="text-xl">{it.icon}</span>
+              {/* Background Accent */}
+              <div className={`absolute -top-20 -right-20 w-40 h-40 rounded-full opacity-0 group-hover:opacity-10 transition-opacity duration-500 ${
+                it.featured ? 'bg-[#f99216]' : 'bg-[#b85a00]'
+              }`} />
+
+              <div className="relative p-8 md:p-10">
+                {/* Icon Container */}
+                <div className={`mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl transition-all duration-300 group-hover:scale-110 ${it.color} shadow-lg`}>
+                  <span className="text-3xl">{it.icon}</span>
                 </div>
 
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-[#111111] flex items-center gap-3">
+                {/* Title & Badge */}
+                <div className="mb-4">
+                  <h3 className="text-2xl md:text-xl font-bold text-[#111111] flex items-center gap-3 mb-2">
                     {it.title}
                     {it.new && (
-                      <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded bg-[#f7efde] text-[#b85a00] text-xs font-semibold">
-                        New
+                      <span className="ml-auto inline-flex items-center px-3 py-1 rounded-full bg-[#f99216] text-white text-xs font-semibold shadow-md">
+                        ✨ New
                       </span>
                     )}
                   </h3>
+                  {it.featured && (
+                    <div className="h-0.5 w-16 bg-gradient-to-r from-[#f99216] to-transparent rounded-full mt-3" />
+                  )}
+                </div>
 
-                  <p className="mt-3 text-sm text-[#6b6b6b]">{it.description}</p>
+                {/* Description */}
+                <p className="text-base text-[#6b6b6b] leading-relaxed mb-6">
+                  {it.description}
+                </p>
 
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {it.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className={`lob-tag inline-block text-xs font-medium px-3 py-1 rounded ${
-                          it.featured ? 'bg-[#eef6ff] text-[#1b4fd8]' : 'bg-gray-100 text-gray-800'
-                        }`}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-100">
+                  {it.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className={`inline-flex items-center text-xs font-semibold px-4 py-1.5 rounded-full transition-all duration-300 hover:scale-105 ${
+                        it.featured
+                          ? 'bg-[#1b4fd8]/10 text-[#1b4fd8] border border-[#1b4fd8]/20 hover:bg-[#1b4fd8]/20'
+                          : 'bg-[#b85a00]/10 text-[#b85a00] border border-[#b85a00]/20 hover:bg-[#b85a00]/20'
+                      }`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
