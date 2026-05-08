@@ -1,6 +1,7 @@
 "use client"
 
 
+import TickerSection from '@/components/Communication_landing/TickerSection'
 import ClientsSection from '@/components/Landing/ClientsSection'
 import CtaSection from '@/components/Landing/CtaSection'
 import HeroSection from '@/components/Landing/HeroSection'
@@ -58,7 +59,7 @@ const Homepage = () => {
           <LinesofBusinessSection />
           <ItservicesSection />
           <SelectedWorkSection />
-          <ClientsSection />
+          <TickerSection />
           <CtaSection />
           
         </motion.div>

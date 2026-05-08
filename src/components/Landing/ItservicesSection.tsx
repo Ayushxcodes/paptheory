@@ -1,38 +1,42 @@
+import { FaPuzzlePiece, FaBrain } from 'react-icons/fa';
+import { AiOutlineMobile } from 'react-icons/ai';
+import { FiCloud, FiSettings, FiBarChart2 } from 'react-icons/fi';
+
 export default function ItservicesSection() {
   const services = [
     {
       title: 'ERP & SAP consulting',
-      icon: '🧩',
+      icon: <FaPuzzlePiece className="w-9 h-9" />,
       description:
         'S/4HANA migrations, BTP extensions, Clean Core assessments and SAP AI integration for enterprise clients.'
     },
     {
       title: 'AI & ML solutions',
-      icon: '🧠',
+      icon: <FaBrain className="w-9 h-9" />,
       description:
         'GenAI applications, RAG systems, predictive analytics, LLM integration and intelligent process automation.'
     },
     {
       title: 'Web & mobile development',
-      icon: '📱',
+      icon: <AiOutlineMobile className="w-9 h-9" />,
       description:
         'Full stack web apps, iOS and Android apps, React, Node JS, MERN stack and cross-platform mobile solutions.'
     },
     {
       title: 'Cloud & DevOps',
-      icon: '☁️',
+      icon: <FiCloud className="w-9 h-9" />,
       description:
         'AWS, SAP BTP, Azure deployments, CI/CD pipelines, cloud architecture design and infrastructure management.'
     },
     {
       title: 'Automation & BPA',
-      icon: '⚙️',
+      icon: <FiSettings className="w-9 h-9" />,
       description:
         'Business process automation, workflow design, document processing and end-to-end operational digitalization.'
     },
     {
       title: 'Data & analytics',
-      icon: '📈',
+      icon: <FiBarChart2 className="w-9 h-9" />,
       description:
         'Real-time dashboards, SAP Analytics Cloud, HANA reporting and business intelligence solutions.'
     }
@@ -80,7 +84,7 @@ export default function ItservicesSection() {
 
               <div className="relative flex flex-col h-full">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#fff7ed] to-[#ffe6d5] text-[#f99216] flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <div className="w-16 h-16 rounded-xl  text-[#f99216] flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
                     {s.icon}
                   </div>
                 </div>

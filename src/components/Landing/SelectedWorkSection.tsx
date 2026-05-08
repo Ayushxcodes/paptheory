@@ -1,39 +1,55 @@
+"use client";
+import { useState, useMemo } from 'react';
+
 export default function SelectedWorkSection() {
-  const works = [
-    {
-      cat: 'IT · Mining & resources',
-      title:
-        'Field supply execution & blast scheduling automation for a global mining company',
-      desc:
-        'Automated blast scheduling, inbound delivery and field operations across 4 global regions using SAP BTP. Reduced a 16-step manual process to a single-click workflow.',
-      region: 'Australia (AusPac)',
-      tags: ['SAP BTP', 'CAPM', 'Fiori']
-    },
-    {
-      cat: 'IT · AI & automation',
-      title: 'PO-to-SO automation pipeline with AI document extraction',
-      desc:
-        'Reduced manual data entry by 90% and cut order processing time from hours to minutes using GenAI document intelligence and SAP BTP integration.',
-      region: 'India',
-      tags: ['GenAI', 'SAP BTP', 'UI5']
-    },
-    {
-      cat: 'IT · ERP & analytics',
-      title: 'Clean Core assessment dashboard for a global engineering firm',
-      desc:
-        'Classified 45,000+ custom SAP objects across 15+ ECC systems to accelerate S/4HANA cloud migration planning with 360° analytics dashboards.',
-      region: 'Germany',
-      tags: ['HANA Cloud', 'SAC', 'ABAP']
-    },
-    {
-      cat: 'Communications · Brand',
-      title: 'Gen Z brand campaigns for Maruti Suzuki, ICICI Bank & Mahindra',
-      desc:
-        'Scroll-stopping content strategies and viral brand campaigns that built real cultural traction with Gen Z audiences across digital platforms.',
-      region: 'India',
-      tags: ['Brand', 'Gen Z', 'Content']
-    }
-  ];
+  const [filter, setFilter] = useState('All');
+  const works = useMemo(
+    () => [
+      {
+        cat: 'IT · Mining & resources',
+        title:
+          'Field supply execution & blast scheduling automation for a global mining company',
+        desc:
+          'Automated blast scheduling, inbound delivery and field operations across 4 global regions using SAP BTP. Reduced a 16-step manual process to a single-click workflow.',
+        region: 'Australia (AusPac)',
+        tags: ['SAP BTP', 'CAPM', 'Fiori']
+      },
+      {
+        cat: 'IT · AI & automation',
+        title: 'PO-to-SO automation pipeline with AI document extraction',
+        desc:
+          'Reduced manual data entry by 90% and cut order processing time from hours to minutes using GenAI document intelligence and SAP BTP integration.',
+        region: 'India',
+        tags: ['GenAI', 'SAP BTP', 'UI5']
+      },
+      {
+        cat: 'IT · ERP & analytics',
+        title: 'Clean Core assessment dashboard for a global engineering firm',
+        desc:
+          'Classified 45,000+ custom SAP objects across 15+ ECC systems to accelerate S/4HANA cloud migration planning with 360° analytics dashboards.',
+        region: 'Germany',
+        tags: ['HANA Cloud', 'SAC', 'ABAP']
+      },
+      {
+        cat: 'Communications · Brand',
+        title: 'Gen Z brand campaigns for Maruti Suzuki, ICICI Bank & Mahindra',
+        desc:
+          'Scroll-stopping content strategies and viral brand campaigns that built real cultural traction with Gen Z audiences across digital platforms.',
+        region: 'India',
+        tags: ['Brand', 'Gen Z', 'Content']
+      }
+    ],
+    []
+  );
+
+  const filteredWorks = useMemo(() => {
+    return works.filter((w) => {
+      if (filter === 'All') return true;
+      if (filter === 'IT') return w.cat.includes('IT');
+      if (filter === 'Communications') return w.cat.includes('Communications');
+      return true;
+    });
+  }, [works, filter]);
 
   return (
     <section id="work" className="relative py-20 md:py-32">
@@ -55,20 +71,43 @@ export default function SelectedWorkSection() {
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap gap-3 mb-12">
-          <button className="filter-btn px-6 py-2.5 rounded-full bg-[#111111] text-white text-sm font-semibold hover:bg-[#f99216] transition-all duration-300 shadow-md hover:shadow-lg">
+          <button
+            onClick={() => setFilter('All')}
+            className={`filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg ${
+              filter === 'All'
+                ? 'bg-[#111111] text-white'
+                : 'bg-white border border-gray-200 text-gray-800 hover:border-[#f99216] hover:text-[#f99216] hover:bg-[#fff7ed] shadow-sm hover:shadow-md'
+            }`}
+          >
             All
           </button>
-          <button className="filter-btn px-6 py-2.5 rounded-full bg-white border border-gray-200 text-gray-800 text-sm font-semibold hover:border-[#f99216] hover:text-[#f99216] hover:bg-[#fff7ed] transition-all duration-300 shadow-sm hover:shadow-md">
+
+          <button
+            onClick={() => setFilter('IT')}
+            className={`filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+              filter === 'IT'
+                ? 'bg-[#111111] text-white shadow-md'
+                : 'bg-white border border-gray-200 text-gray-800 hover:border-[#f99216] hover:text-[#f99216] hover:bg-[#fff7ed] shadow-sm hover:shadow-md'
+            }`}
+          >
             IT & technology
           </button>
-          <button className="filter-btn px-6 py-2.5 rounded-full bg-white border border-gray-200 text-gray-800 text-sm font-semibold hover:border-[#f99216] hover:text-[#f99216] hover:bg-[#fff7ed] transition-all duration-300 shadow-sm hover:shadow-md">
+
+          <button
+            onClick={() => setFilter('Communications')}
+            className={`filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+              filter === 'Communications'
+                ? 'bg-[#111111] text-white shadow-md'
+                : 'bg-white border border-gray-200 text-gray-800 hover:border-[#f99216] hover:text-[#f99216] hover:bg-[#fff7ed] shadow-sm hover:shadow-md'
+            }`}
+          >
             Communications
           </button>
         </div>
 
         {/* Work Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {works.map((w) => (
+          {filteredWorks.map((w) => (
             <div
               key={w.title}
               className="work-card group relative overflow-hidden bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:border-[#f99216]/40"
@@ -121,7 +160,8 @@ export default function SelectedWorkSection() {
                 <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-[#f99216] to-transparent group-hover:w-full transition-all duration-500 rounded-full" />
               </div>
             </div>
-          ))}
+              ))
+          }
         </div>
       </div>
     </section>
