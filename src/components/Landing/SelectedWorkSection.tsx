@@ -76,7 +76,7 @@ export default function SelectedWorkSection() {
             className={`filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg ${
               filter === 'All'
                 ? 'bg-[#111111] text-white'
-                : 'bg-white border border-gray-200 text-gray-800 hover:border-[#f99216] hover:text-[#f99216] hover:bg-[#fff7ed] shadow-sm hover:shadow-md'
+                : 'bg-white border border-gray-700 text-gray-800 hover:border-[#f99216] hover:text-[#f99216] hover:bg-[#fff7ed] shadow-sm hover:shadow-md'
             }`}
           >
             All
@@ -87,7 +87,7 @@ export default function SelectedWorkSection() {
             className={`filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
               filter === 'IT'
                 ? 'bg-[#111111] text-white shadow-md'
-                : 'bg-white border border-gray-200 text-gray-800 hover:border-[#f99216] hover:text-[#f99216] hover:bg-[#fff7ed] shadow-sm hover:shadow-md'
+                : 'bg-white border border-gray-700 text-gray-800 hover:border-[#f99216] hover:text-[#f99216] hover:bg-[#fff7ed] shadow-sm hover:shadow-md'
             }`}
           >
             IT & technology
@@ -98,7 +98,7 @@ export default function SelectedWorkSection() {
             className={`filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
               filter === 'Communications'
                 ? 'bg-[#111111] text-white shadow-md'
-                : 'bg-white border border-gray-200 text-gray-800 hover:border-[#f99216] hover:text-[#f99216] hover:bg-[#fff7ed] shadow-sm hover:shadow-md'
+                : 'bg-white border border-gray-700 text-gray-800 hover:border-[#f99216] hover:text-[#f99216] hover:bg-[#fff7ed] shadow-sm hover:shadow-md'
             }`}
           >
             Communications
@@ -110,7 +110,7 @@ export default function SelectedWorkSection() {
           {filteredWorks.map((w) => (
             <div
               key={w.title}
-              className="work-card group relative overflow-hidden bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:border-[#f99216]/40"
+              className="work-card group relative overflow-hidden bg-white border border-gray-700 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:border-[#f99216]/40"
             >
               {/* Background Accent */}
               <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-[#f99216]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

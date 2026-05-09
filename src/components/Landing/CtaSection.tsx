@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function CtaSection() {
   return (
     <section className="relative py-16 md:py-24">
-      <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center bg-white rounded-2xl shadow-lg border border-gray-100">
+      <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center bg-white rounded-xl shadow-lg border border-gray-700">
         <div className="py-12 px-6">
           <p className="text-sm uppercase tracking-wide text-[#f99216] font-medium">Let&rsquo;s work together</p>
 
