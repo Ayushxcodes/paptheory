@@ -94,11 +94,7 @@ export default function LinesofBusinessSection() {
                   {it.tags.map((tag) => (
                     <span
                       key={tag}
-                      className={`inline-flex items-center text-xs font-semibold px-4 py-1.5 rounded-full transition-all duration-300 hover:scale-105 ${
-                        it.featured
-                          ? 'bg-[#1b4fd8]/10 text-[#1b4fd8] border border-[#1b4fd8]/20 hover:bg-[#1b4fd8]/20'
-                          : 'bg-[#b85a00]/10 text-[#b85a00] border border-[#b85a00]/20 hover:bg-[#b85a00]/20'
-                      }`}
+                      className={`inline-flex items-center text-xs font-semibold px-4 py-1.5 rounded-full transition-all duration-300 hover:scale-105 bg-[#b85a00]/10 text-[#b85a00] border border-[#b85a00]/20 hover:bg-[#b85a00]/20`}
                     >
                       {tag}
                     </span>

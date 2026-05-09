@@ -81,12 +81,12 @@ export default function ItservicesSection() {
           {services.map((s, i) => (
             <div
               key={s.title}
-              className="svc-card group relative overflow-hidden bg-white border border-gray-700 rounded-1xl p-8 shadow-md hover:shadow-xl transition-all duration-500 hover:border-[#f99216]/30"
+              className="svc-card group relative overflow-hidden bg-white border border-gray-300 rounded-1xl p-8 shadow-md hover:shadow-xl transition-all duration-500 hover:border-[#f99216]/30"
             >
               {/* Large animated number (decorative) */}
               <NumberBadge
                 value={i + 1}
-                className="absolute top-6 right-6 text-[64px] md:text-[92px] font-extrabold text-[#f99216] opacity-40 pointer-events-none leading-none select-none"
+                className="absolute top-6 right-6 text-[64px] md:text-[92px] font-normal text-[#f99216] opacity-50 pointer-events-none leading-none select-none"
                 delay={150 * i}
               />
               {/* Background Accent */}
@@ -94,7 +94,7 @@ export default function ItservicesSection() {
 
               <div className="relative flex flex-col h-full">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 rounded-xl  text-[#f99216] flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-20 h-20 rounded-xl  text-[#f99216] flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
                     {s.icon}
                   </div>
                   {/* Small visible counter for screen readers and quick read */}
@@ -175,8 +175,8 @@ function NumberBadge({ value, className = '', delay = 0 }: { value: number; clas
   }, [value, delay]);
 
   return (
-    <span aria-hidden className={className}>
-      {count}
+    <span aria-hidden className={className} style={{ WebkitTextStroke: '1px #f99216', color: 'transparent' }}>
+      {count.toString().padStart(2, '0')}
     </span>
   );
 }

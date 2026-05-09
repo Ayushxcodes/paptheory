@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -12,7 +13,7 @@ export default function Navbar() {
 
     <header className="absolute top-0 left-0 right-0 z-50 bg-white border-b border-neutral-200">
       <div className="mx-auto max-w-[1200px] px-6 h-[72px] flex items-center justify-between">
-        <a href="/" className="flex items-center gap-2 cursor-pointer">
+        <Link href="/" className="flex items-center gap-2 cursor-pointer">
           <Image
             src="/web_logo.png"
             alt="Paper Theory Logo"
@@ -20,14 +21,15 @@ export default function Navbar() {
             height={60}
             className="h-17 md:h-20 w-auto"
           />
-        </a>
+        </Link>
 
         {/* Desktop Nav links shifted to right */}
         <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-700 relative">
-          <a href="/" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Homepage</a>
-          <a href="/works" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">OurWork</a>
-          <a href="/genz" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Social corner</a>
-          <a href="/contact" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Contact Us</a>
+          <Link href="/" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Home</Link>
+          <a href="#services" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">IT Services</a>
+          <a href="/communication" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Our Work</a>
+          <a href="/about" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">About Us</a>
+          <a href="/contact" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Contact</a>
         </nav>
 
         {/* Mobile menu button */}
@@ -43,10 +45,11 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-neutral-200">
           <div className="px-6 py-4 space-y-4">
-            <a href="/" className="block py-2 text-sm text-neutral-700 transition-colors duration-200 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Homepage</a>
-            <a href="/works" className="block py-2 text-sm text-neutral-700 transition-colors duration-200 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">OurWork</a>
-            <a href="/genz" className="block py-2 text-sm text-neutral-700 transition-colors duration-200 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Social corner</a>
-            <a href="/contact" className="block py-2 text-sm text-neutral-700 transition-colors duration-200 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Contact Us</a>
+            <Link href="/" className="block py-2 text-sm text-neutral-700 transition-colors duration-200 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Home</Link>
+            <Link href="#services" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">IT Services</Link>
+            <Link href="/works" className="block py-2 text-sm text-neutral-700 transition-colors duration-200 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Our Work</Link>
+            <Link href="/about" className="block py-2 text-sm text-neutral-700 transition-colors duration-200 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">About Us</Link>
+            <Link href="/contact" className="block py-2 text-sm text-neutral-700 transition-colors duration-200 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Contact Us</Link>
           </div>
         </div>
       )}
@@ -91,7 +94,7 @@ function NavItem({ label, items }: { label: string; items: string[] }) {
           <ul className="py-2">
             {items.map((item) => (
               <li key={item}>
-                <a
+                <Link
                   href={
                     item.toLowerCase() === 'homepage' ? '/' :
                     item.toLowerCase() === 'our works' ? '/works' :
@@ -100,7 +103,7 @@ function NavItem({ label, items }: { label: string; items: string[] }) {
                   className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-neutral-900 transition"
                 >
                   {item}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -128,7 +131,7 @@ function MobileNavItem({ label, items }: { label: string; items: string[] }) {
         <ul className="pl-4 mt-2 space-y-1">
           {items.map((item) => (
             <li key={item}>
-              <a
+              <Link
                 href={
                   item.toLowerCase() === 'homepage' ? '/' :
                   item.toLowerCase() === 'our works' ? '/works' :
@@ -137,7 +140,7 @@ function MobileNavItem({ label, items }: { label: string; items: string[] }) {
                 className="block py-1 text-sm text-neutral-600 hover:text-neutral-900"
               >
                 {item}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
