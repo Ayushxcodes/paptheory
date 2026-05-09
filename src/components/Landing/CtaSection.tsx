@@ -24,9 +24,6 @@ export default function CtaSection() {
               Get in touch
             </Link>
 
-            <Link href="/works" className="text-[#111111] font-medium hover:text-[#f99216] transition">
-              See our work →
-            </Link>
           </div>
         </div>
       </div>

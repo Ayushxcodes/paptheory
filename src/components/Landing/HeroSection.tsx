@@ -45,11 +45,11 @@ export default function Hero() {
             </p>
 
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
-              <Link href="/genz" className="bg-[#f99216] text-white px-8 py-4 rounded-md text-[16px] font-semibold hover:opacity-90 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out transform w-full sm:w-auto">
+              <Link href="#services" className="bg-[#f99216] text-white px-8 py-4 rounded-md text-[16px] font-semibold hover:opacity-90 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out transform w-full sm:w-auto">
                 Explore our Services →
               </Link>
 
-              <Link href="/genz" className="flex items-center justify-center sm:justify-start gap-3 text-[#111111] font-medium text-[16px] hover:text-[#f99216] transition-colors duration-300 group">
+              <Link href="#work" className="flex items-center justify-center sm:justify-start gap-3 text-[#111111] font-medium text-[16px] hover:text-[#f99216] transition-colors duration-300 group">
                 View our Work
                 <span className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm group-hover:bg-[#f99216] group-hover:translate-x-1 transition-all duration-300 ease-in-out">
                   →
