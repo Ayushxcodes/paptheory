@@ -48,7 +48,7 @@ export default function Hero() {
             </p>
 
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
-              <Link href="#services" className="bg-[#f99216] text-white px-6 py-3 rounded-md text-[16px] font-semibold hover:opacity-90 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out transform w-full sm:w-auto inline-flex items-center justify-center gap-3" onClick={(e) => {
+              <Link href="#services" className="bg-[#f99216] text-white px-8 py-4 rounded-lg text-[18px] sm:text-[20px] font-semibold hover:opacity-90 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out transform w-full sm:w-auto inline-flex items-center justify-center gap-4" onClick={(e) => {
                 e.preventDefault();
                 const element = document.querySelector('#services');
                 if (element) {
@@ -56,16 +56,14 @@ export default function Hero() {
                 }
                 window.history.pushState(null, '', '#services');
               }}>
-                <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                  <rect x="1.5" y="5" width="21" height="14" rx="3" fill="#ffff" />
-                  <circle cx="7.5" cy="12" r="2" fill="#ffffff" />
-                </svg>
-                <span>Explore IT Services</span>
+                <span>Build With Us →</span>
               </Link>
-              <Link href="/communication" className="flex items-center justify-center sm:justify-start gap-3 text-[#111111] font-medium text-[16px] hover:text-[#f99216] transition-colors duration-300 group">
+              <Link href="/communication" className="flex items-center justify-center sm:justify-start gap-3 text-[#111111] font-medium text-[18px] hover:text-[#f99216] transition-colors duration-300 group">
                 View our Work
-                <span className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm group-hover:bg-[#f99216] group-hover:translate-x-1 transition-all duration-300 ease-in-out">
-                  →
+                <span className="w-9 h-9 rounded-full bg-black text-white flex items-center justify-center text-base group-hover:bg-[#f99216] group-hover:translate-x-1 transition-all duration-300 ease-in-out">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M7 7h10v10" />
+                  </svg>
                 </span>
               </Link>
             </div>

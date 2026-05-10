@@ -2,6 +2,7 @@
 
 
 import TickerSection from '@/components/Communication_landing/TickerSection'
+import About from '@/components/Landing/AboutSection'
 import ClientsSection from '@/components/Landing/ClientsSection'
 import CtaSection from '@/components/Landing/CtaSection'
 import HeroSection from '@/components/Landing/HeroSection'
@@ -56,10 +57,12 @@ const Homepage = () => {
           transition={{ duration: 0.5 }}
         >
           <HeroSection />
+          <About />
           <LinesofBusinessSection />
           <ItservicesSection />
-          <SelectedWorkSection />
           <TickerSection />
+          <SelectedWorkSection />
+          
           <CtaSection />
           
         </motion.div>

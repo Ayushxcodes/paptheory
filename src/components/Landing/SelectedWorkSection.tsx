@@ -1,35 +1,83 @@
 "use client";
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 export default function SelectedWorkSection() {
-  const [filter, setFilter] = useState('All');
+  const searchParams = useSearchParams();
+
+  const initialFilter = (() => {
+    const f = searchParams?.get('filter');
+    if (f === 'IT') return 'IT';
+    if (f === 'Communications') return 'Communications';
+    return 'All';
+  })();
+
+  const [filter, setFilter] = useState(initialFilter);
+
+  // Keep filter in sync if the search param changes, but avoid synchronous setState
+  useEffect(() => {
+    const f = searchParams?.get('filter');
+    const mapped = f === 'IT' ? 'IT' : f === 'Communications' ? 'Communications' : 'All';
+    if (mapped !== filter) {
+      const id = window.setTimeout(() => setFilter(mapped), 0);
+      return () => window.clearTimeout(id);
+    }
+    return;
+  }, [searchParams, filter]);
+
+  // Listen for custom events dispatched when the ExploreWorkBar is clicked so repeated clicks work
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent)?.detail;
+      if (detail?.filter) setFilter(detail.filter);
+    };
+    window.addEventListener('pap-filter', handler as EventListener);
+    return () => window.removeEventListener('pap-filter', handler as EventListener);
+  }, []);
   const works = useMemo(
     () => [
       {
-        cat: 'IT · Mining & resources',
+        cat: 'IT · Supply Chain · Intelligent Automation',
         title:
-          'Field supply execution & blast scheduling automation for a global mining company',
+          'From delivery to warehouse — Smart delivery tracking & goods receipt automation for manufacturing plants',
         desc:
-          'Automated blast scheduling, inbound delivery and field operations across 4 global regions using SAP BTP. Reduced a 16-step manual process to a single-click workflow.',
-        region: 'Australia (AusPac)',
-        tags: ['SAP BTP', 'CAPM', 'Fiori']
+          'Built for a large-scale manufacturing operation — A smart field dashboard giving plant teams real-time visibility of incoming material deliveries and live status tracking. An embedded AI assistant lets operators complete goods receipts using plain language — no SAP knowledge needed.',
+        region: 'India · Australia · Europe · North America',
+        tags: ['SAP BTP', 'Joule AI', 'Supply Chain', 'S/4HANA']
       },
       {
-        cat: 'IT · AI & automation',
-        title: 'PO-to-SO automation pipeline with AI document extraction',
+        cat: 'IT · Mining & resources',
+        title: 'Field operations platform for a global explosives & mining company',
         desc:
-          'Reduced manual data entry by 90% and cut order processing time from hours to minutes using GenAI document intelligence and SAP BTP integration.',
+          'A live enterprise platform covering blast scheduling, forecasting, delivery automation, inventory management and customer portal — deployed across four global regions. Built on SAP BTP with AI assistance and mobile offline capability for remote field teams.',
+        region: 'Australia · North America · EMEA · Asia',
+        tags: ['SAP BTP', 'SAP S/4 HANA', 'Mining', 'Clean Core', 'AI', 'Mobile', 'Web App']
+      },
+      {
+        cat: 'IT · Enterprise HR & Workforce Management',
+        title: 'AI-powered workforce management & talent intelligence platform',
+        desc:
+          'An enterprise talent platform where employees own their profiles, managers get real-time workforce intelligence, resource teams match open roles to available talent instantly, and AI auto-generates CVs — all in one place. Built for 10,000+ users.',
         region: 'India',
-        tags: ['GenAI', 'SAP BTP', 'UI5']
+        tags: ['MEAN Stack', 'GenAI', 'HR Tech', 'Workforce Management', 'Node.js']
       },
       {
-        cat: 'IT · ERP & analytics',
-        title: 'Clean Core assessment dashboard for a global engineering firm',
+        cat: 'IT · On-demand Services',
+        title: 'On-demand services super-app for 25+ service categories',
         desc:
-          'Classified 45,000+ custom SAP objects across 15+ ECC systems to accelerate S/4HANA cloud migration planning with 360° analytics dashboards.',
-        region: 'Germany',
-        tags: ['HANA Cloud', 'SAC', 'ABAP']
+          'A consumer mobile app — built natively for iOS and Android — offering cab booking, food delivery, housekeeping, tutoring and 25+ on-demand services on a single platform. Real-time service matching, live tracking and seamless payments, all deployed on AWS cloud.',
+        region: 'New Jersey, USA',
+        tags: ['iOS', 'Android', 'Node.js', 'MongoDB', 'AWS']
       },
+      {
+        cat: 'IT · AI & Automation',
+        title: 'Intelligent PO-to-Sales Order automation using AI document extraction',
+        desc:
+          'Large manufacturers receive dozens of POs daily via email — in different formats, from different vendors. This solution reads incoming POs, extracts data using AI and automatically creates Sales Orders in SAP — eliminating manual entry and cutting processing time from hours to minutes.',
+        region: 'India',
+        tags: ['GenAI', 'SAP BTP', 'Document AI', 'S/4HANA', 'Process Automation']
+      },
+      // keep one of the original entries
       {
         cat: 'Communications · Brand',
         title: 'Gen Z brand campaigns for Maruti Suzuki, ICICI Bank & Mahindra',
@@ -72,7 +120,14 @@ export default function SelectedWorkSection() {
         {/* Filter Buttons */}
         <div className="flex flex-wrap gap-3 mb-12">
           <button
-            onClick={() => setFilter('All')}
+            onClick={() => {
+              setFilter('All');
+              if (typeof window !== 'undefined') {
+                const url = new URL(window.location.href);
+                url.searchParams.delete('filter');
+                window.history.replaceState({}, '', url.toString());
+              }
+            }}
             className={`filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg ${
               filter === 'All'
                 ? 'bg-[#111111] text-white'
@@ -83,7 +138,16 @@ export default function SelectedWorkSection() {
           </button>
 
           <button
-            onClick={() => setFilter('IT')}
+            onClick={() => {
+              setFilter('IT');
+              if (typeof window !== 'undefined') {
+                const url = new URL(window.location.href);
+                url.searchParams.set('filter', 'IT');
+                window.history.replaceState({}, '', url.toString());
+                const el = document.querySelector('#work');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
             className={`filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
               filter === 'IT'
                 ? 'bg-[#111111] text-white shadow-md'
@@ -94,7 +158,16 @@ export default function SelectedWorkSection() {
           </button>
 
           <button
-            onClick={() => setFilter('Communications')}
+            onClick={() => {
+              setFilter('Communications');
+              if (typeof window !== 'undefined') {
+                const url = new URL(window.location.href);
+                url.searchParams.set('filter', 'Communications');
+                window.history.replaceState({}, '', url.toString());
+                const el = document.querySelector('#work');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
             className={`filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
               filter === 'Communications'
                 ? 'bg-[#111111] text-white shadow-md'
@@ -110,12 +183,12 @@ export default function SelectedWorkSection() {
           {filteredWorks.map((w) => (
             <div
               key={w.title}
-              className="work-card group relative overflow-hidden bg-white border border-gray-300 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:border-[#f99216]/40"
+              className="work-card group relative overflow-hidden bg-white border border-gray-300 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:border-[#f99216]/40 h-full flex"
             >
               {/* Background Accent */}
               <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-[#f99216]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <div className="relative p-8">
+              <div className="relative p-8 flex-1 flex flex-col">
                 <div className="work-card-header">
                   {/* Category Badge */}
                   <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-[#f99216]/10 to-[#f99216]/5 rounded-full mb-4">
@@ -139,7 +212,7 @@ export default function SelectedWorkSection() {
                 <div className="mt-6 h-px bg-gradient-to-r from-gray-200 to-transparent" />
 
                 {/* Footer */}
-                <div className="work-card-footer mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div className="work-card-footer mt-auto pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <span className="work-region text-sm font-medium text-[#6b6b6b] flex items-center gap-2">
                     📍 <span className="text-[#111111] font-semibold">{w.region}</span>
                   </span>

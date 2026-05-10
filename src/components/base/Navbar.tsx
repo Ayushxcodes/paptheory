@@ -28,7 +28,6 @@ export default function Navbar() {
           <Link href="/" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Home</Link>
           <a href="#services" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">IT Services</a>
           <a href="/communication" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Our Work</a>
-          <a href="/about" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">About Us</a>
           <a href="/contact" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Contact</a>
         </nav>
 
@@ -48,7 +47,6 @@ export default function Navbar() {
             <Link href="/" className="block py-2 text-sm text-neutral-700 transition-colors duration-200 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Home</Link>
             <Link href="#services" className="transition-colors duration-200 text-neutral-700 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">IT Services</Link>
             <Link href="/works" className="block py-2 text-sm text-neutral-700 transition-colors duration-200 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Our Work</Link>
-            <Link href="/about" className="block py-2 text-sm text-neutral-700 transition-colors duration-200 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">About Us</Link>
             <Link href="/contact" className="block py-2 text-sm text-neutral-700 transition-colors duration-200 hover:text-[#f99216] focus:text-[#f99216] active:text-[#f99216]">Contact Us</Link>
           </div>
         </div>
