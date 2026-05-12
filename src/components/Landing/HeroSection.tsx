@@ -1,6 +1,10 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import { FaTools, FaLaptopCode} from 'react-icons/fa';
+import { FaPeopleGroup } from "react-icons/fa6";
+import { MdWork, MdEngineering } from "react-icons/md";
+import { HiOutlineUsers } from "react-icons/hi";
 import CardSwap, { Card } from '@/components/CardSwap'
 import ExploreWorkBar from '@/components/ExploreWorkBar'
 import Link from 'next/link'
@@ -17,7 +21,7 @@ export default function Hero() {
           <div>
             <h3 className="
               text-[34px] 
-              sm:text-[42px] 
+              sm:text-[42px]
               lg:text-[56px] 
               leading-[1.1] 
               lg:leading-[1.05] 
@@ -56,9 +60,11 @@ export default function Hero() {
                 }
                 window.history.pushState(null, '', '#services');
               }}>
+                <FaPeopleGroup className="w-5 h-5 text-black" />
                 <span>Build With Us →</span>
               </Link>
               <Link href="/communication" className="flex items-center justify-center sm:justify-start gap-3 text-[#111111] font-medium text-[18px] hover:text-[#f99216] transition-colors duration-300 group">
+                <MdWork className="w-5 h-5 text-black" />
                 View our Work
                 <span className="w-9 h-9 rounded-full bg-black text-white flex items-center justify-center text-base group-hover:bg-[#f99216] group-hover:translate-x-1 transition-all duration-300 ease-in-out">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

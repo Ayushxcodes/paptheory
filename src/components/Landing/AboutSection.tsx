@@ -1,12 +1,10 @@
 "use client";
 import { useEffect, useState, useRef } from 'react';
-import { FaBullseye, FaLink, FaGlobe, FaCalendarAlt, FaProjectDiagram, FaMapMarkerAlt, FaUsers } from 'react-icons/fa';
+import { FaCalendarAlt, FaProjectDiagram, FaMapMarkerAlt, FaUsers } from 'react-icons/fa';
 
 export default function About() {
   const [statsInView, setStatsInView] = useState(false);
-  const [philosophyInView, setPhilosophyInView] = useState(false);
   const statsRef = useRef<HTMLDivElement>(null);
-  const philosophyRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -15,16 +13,12 @@ export default function About() {
           if (entry.target === statsRef.current && entry.isIntersecting) {
             setStatsInView(true);
           }
-          if (entry.target === philosophyRef.current && entry.isIntersecting) {
-            setPhilosophyInView(true);
-          }
         });
       },
       { threshold: 0.1 }
     );
 
     if (statsRef.current) observer.observe(statsRef.current);
-    if (philosophyRef.current) observer.observe(philosophyRef.current);
 
     return () => observer.disconnect();
   }, []);
@@ -85,32 +79,6 @@ export default function About() {
               </div>
             );
           })}
-        </div>
-
-        {/* Philosophy cards */}
-        <div ref={philosophyRef} className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
-          {[
-            { icon: FaBullseye, title: 'Outcome obsessed', desc: 'We measure success by what changes in your business, not what we deliver on paper. Every engagement starts with the end in mind.' },
-            { icon: FaLink, title: 'Full-stack accountability', desc: 'From architecture to go-live, one team owns the entire journey. No handoffs. No blame games. Just delivery.' },
-            { icon: FaGlobe, title: 'Global delivery, local understanding', desc: 'Onsite experience across Australia, Germany and the US — with India-rooted execution that keeps costs sharp and quality high.' }
-          ].map(({ icon: Icon, title, desc }, i) => (
-            <div
-              key={i}
-              className={`group bg-white border border-gray-200  p-8 shadow-md hover:shadow-xl transition-all duration-500 hover:border-[#f99216]/30 hover:-translate-y-1 relative overflow-hidden ${
-                philosophyInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
-              style={{ transitionDelay: philosophyInView ? `${i * 200}ms` : '0ms' }}
-            >
-              <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#f99216]/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative">
-                <div className="w-12 h-12 bg-[#f99216]/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Icon className="w-6 h-6 text-[#f99216]" />
-                </div>
-                <h4 className="text-xl font-bold text-[#111111] mb-3 group-hover:text-[#f99216] transition-colors duration-300">{title}</h4>
-                <p className="text-[#6b6b6b] leading-relaxed">{desc}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
