@@ -57,12 +57,12 @@ const Homepage = () => {
           transition={{ duration: 0.5 }}
         >
           <HeroSection />
-          <About />
+          
           <LinesofBusinessSection />
           <ItservicesSection />
           <TickerSection />
           <SelectedWorkSection />
-          
+          <About />
           <CtaSection />
           
         </motion.div>

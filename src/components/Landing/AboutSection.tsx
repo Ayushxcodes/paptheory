@@ -30,7 +30,7 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" className="relative py-20 md:py-32" style={{ background: 'radial-gradient(circle at 20% 80%, rgba(249, 146, 22, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(249, 146, 22, 0.03) 0%, transparent 50%)' }}>
+    <section id="about" className="relative py-20 md:py-32" style={{ background: 'radial-gradient(circle at 20% 80%, rgba(249, 146, 22, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(249, 146, 22, 0.03) 0%, transparent 30%)' }}>
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
